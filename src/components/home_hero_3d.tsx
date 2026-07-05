@@ -2,14 +2,7 @@
 
 import Script from "next/script";
 
-// ป้องกันปัญหา TypeScript กับ Web Component ของ Google <model-viewer>
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "model-viewer": any;
-    }
-  }
-}
+
 
 export default function HomeHero3D() {
   return (
@@ -48,7 +41,7 @@ export default function HomeHero3D() {
           height: "100%",
           outline: "none",
           "--poster-color": "transparent",
-        }}
+        } as React.CSSProperties}
       />
     </div>
   );

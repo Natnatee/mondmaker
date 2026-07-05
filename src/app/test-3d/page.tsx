@@ -6,14 +6,7 @@ import Script from "next/script";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-// หลีกเลี่ยงข้อผิดพลาดของ TypeScript เมื่อใช้ Web Component <model-viewer> ใน JSX
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "model-viewer": any;
-    }
-  }
-}
+
 
 // รายการโมเดลทดสอบ
 const test_models = [
