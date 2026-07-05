@@ -309,7 +309,6 @@ body::before {
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
   margin-top: var(--space-3xl);
-  animation: fadeInUp 0.6s var(--ease-out) 0.3s both;
 }
 
 .category-card {
@@ -328,6 +327,20 @@ body::before {
   cursor: pointer;
   text-align: left;
   display: block;
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out) both;
+}
+
+.category-card:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.category-card:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.category-card:nth-child(3) {
+  animation-delay: 0.8s;
 }
 
 .category-card:hover {
@@ -578,26 +591,101 @@ body::before {
   border-radius: var(--radius-sm);
 }
 
+/* ---------- Navbar CTA Button ---------- */
+.navbar-cta-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--accent-1);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+}
+
+.navbar-cta-btn:hover {
+  background: var(--accent-2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.2);
+  color: #ffffff;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid var(--border-subtle);
   background: var(--bg-secondary);
-  padding: var(--space-2xl) 0;
-  text-align: center;
+  padding: var(--space-2xl) 0 var(--space-xl);
   margin-top: auto;
 }
 
-.footer p {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.footer .brand-name {
-  font-weight: 700;
+.footer-brand {
+  font-weight: 800;
+  font-size: 1.25rem;
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-bottom: 4px;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.footer-contact {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  background: var(--bg-primary);
+}
+
+.contact-item:hover {
+  border-color: var(--accent-1);
+  color: var(--accent-1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+}
+
+.contact-item.line:hover {
+  border-color: #06c755;
+  color: #06c755;
+  background: rgba(6, 199, 85, 0.04);
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.08);
+}
+
+.footer-bottom {
+  padding-top: var(--space-lg);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
 /* ---------- Animations ---------- */

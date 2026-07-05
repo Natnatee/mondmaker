@@ -13,13 +13,23 @@ export default function Navbar() {
         <Link href="/" className="navbar-brand">
           <span className="brand-accent">Mond</span>Maker
         </Link>
-        <ul className="navbar-links">
-          {nav_links.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href}>{link.label}</Link>
-            </li>
-          ))}
-        </ul>
+        <div style={{ display: "flex", alignItems: "center", gap: "var(--space-lg)" }}>
+          <ul className="navbar-links">
+            {nav_links.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="https://line.me/ti/p/~0973355322"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar-cta-btn"
+          >
+            💬 Add Line
+          </a>
+        </div>
       </div>
     </nav>
   );
