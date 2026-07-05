@@ -1,0 +1,71 @@
+[
+  {
+    "id": "cold-room-monitoring",
+    "title": "Smart Cold Room Monitoring",
+    "category": "smart-iot",
+    "tags": ["IoT", "Web", "3D Printing"],
+    "businessOutcome": "ช่วยตรวจจับไฟดับและอุณหภูมิห้องเย็นแบบเรียลไทม์ ลดความเสียหายของยาสต็อกลง 100%",
+    "summary": "ระบบตรวจสอบอุณหภูมิห้องเย็นและสถานะกระแสไฟฟ้า แจ้งเตือนผ่าน LINE Notify ทันทีเมื่อเกิดความผิดปกติ",
+    "media": {
+      "thumbnail": "/images/projects/cold-room-thumb.jpg",
+      "gallery": []
+    },
+    "techSpecs": {
+      "embedded": ["ESP32-S3", "DHT22", "ACS712 Current Sensor"],
+      "web": ["Next.js", "Chart.js", "Responsive Dashboard"],
+      "design3D": ["Fusion 360", "ELEGOO PLA", "IP65 Case"],
+      "automation": ["n8n Workflow", "LINE Notify API"]
+    },
+    "features": [
+      "แจ้งเตือนทันทีเมื่อไฟดับ (มีวงจรสำรองไฟ)",
+      "หน้าเว็บกราฟประวัติอุณหภูมิย้อนหลัง",
+      "สรุปรายงานประจำวันด้วย AI"
+    ]
+  },
+  {
+    "id": "smart-kiosk",
+    "title": "Interactive Smart Kiosk",
+    "category": "web-automation",
+    "tags": ["Web", "IoT", "AI Automation"],
+    "businessOutcome": "ระบบคีออสอัจฉริยะที่รวมการสั่งซื้อ พิมพ์ใบเสร็จ และสรุปรายงานอัตโนมัติ ลดเวลาบริหารร้านลง 80%",
+    "summary": "ตู้คีออสหน้าจอสัมผัสที่เชื่อมต่อระบบหลังบ้านอัตโนมัติผ่าน n8n ยิงข้อมูลเข้า Google Sheets และ LINE",
+    "media": {
+      "thumbnail": "/images/projects/smart-kiosk-thumb.jpg",
+      "gallery": []
+    },
+    "techSpecs": {
+      "embedded": ["Raspberry Pi 4", "Thermal Printer Module"],
+      "web": ["Next.js", "Clerk Auth", "PWA"],
+      "design3D": ["Fusion 360", "ELEGOO ABS", "Enclosure Design"],
+      "automation": ["n8n", "Google Sheets API", "LINE Messaging API"]
+    },
+    "features": [
+      "หน้าจอสั่งอาหารแบบ Touch-friendly",
+      "พิมพ์ใบเสร็จอัตโนมัติ",
+      "สรุปยอดขายรายวันส่งเข้า LINE กลุ่ม"
+    ]
+  },
+  {
+    "id": "custom-enclosure",
+    "title": "Precision 3D Printed Enclosures",
+    "category": "3d-printing",
+    "tags": ["3D Printing", "IoT"],
+    "businessOutcome": "ออกแบบและผลิตเคสสำหรับบอร์ด IoT ที่แม่นยำ พร้อมใช้งานจริงเชิงวิศวกรรม ไม่ใช่แค่โมเดลเล่นๆ",
+    "summary": "บริการออกแบบ 3D CAD และพิมพ์เคสเฉพาะทางสำหรับโปรเจกต์ IoT ตั้งแต่ต้นแบบจนถึงชิ้นงานจริง",
+    "media": {
+      "thumbnail": "/images/projects/3d-enclosure-thumb.jpg",
+      "gallery": []
+    },
+    "techSpecs": {
+      "embedded": [],
+      "web": [],
+      "design3D": ["Fusion 360", "ELEGOO CC2 Printer", "PLA / ABS / PETG"],
+      "automation": []
+    },
+    "features": [
+      "ออกแบบช่องบอร์ด ปุ่มกด และพอร์ตเชื่อมต่ออย่างแม่นยำ",
+      "เลือกวัสดุตามการใช้งาน (กันน้ำ กันความร้อน)",
+      "ส่งมอบทั้งไฟล์ STL และชิ้นงานจริง"
+    ]
+  }
+]
