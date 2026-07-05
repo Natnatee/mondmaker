@@ -85,6 +85,10 @@
         "/images/projects/chodphiphat-commerce/gallay/image copy.png",
         "/images/projects/chodphiphat-commerce/gallay/image copy 2.png",
         "/images/projects/chodphiphat-commerce/gallay/image copy 3.png"
+      ],
+      "reviewImages": [
+        "/images/projects/chodphiphat-commerce/review/image.png",
+        "/images/projects/chodphiphat-commerce/review/image copy.png"
       ]
     },
     "demoUrl": "https://www.cppxmaterials.com/",
