@@ -9,6 +9,7 @@ interface ProjectData {
     thumbnail: string;
     gallery: string[];
   };
+  demoUrl?: string;
   techSpecs: {
     embedded: string[];
     web: string[];
@@ -43,28 +44,42 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
   return (
     <article className="project-card">
       <div className="project-card-image">
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-            background:
-              project.category === "smart-iot"
-                ? "linear-gradient(135deg, rgba(2,132,199,0.15), rgba(2,50,80,0.4))"
-                : project.category === "web-automation"
-                  ? "linear-gradient(135deg, rgba(79,70,229,0.15), rgba(40,20,80,0.4))"
-                  : "linear-gradient(135deg, rgba(219,39,119,0.15), rgba(80,20,50,0.4))",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "2.5rem",
-          }}
-        >
-          {project.category === "smart-iot"
-            ? "⚡"
-            : project.category === "web-automation"
-              ? "🌐"
-              : "🔧"}
-        </div>
+        {project.media.thumbnail ? (
+          <img
+            src={project.media.thumbnail}
+            alt={project.title}
+            loading="lazy"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              display: "block",
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              background:
+                project.category === "smart-iot"
+                  ? "linear-gradient(135deg, rgba(2,132,199,0.15), rgba(2,50,80,0.4))"
+                  : project.category === "web-automation"
+                    ? "linear-gradient(135deg, rgba(79,70,229,0.15), rgba(40,20,80,0.4))"
+                    : "linear-gradient(135deg, rgba(219,39,119,0.15), rgba(80,20,50,0.4))",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: "2.5rem",
+            }}
+          >
+            {project.category === "smart-iot"
+              ? "⚡"
+              : project.category === "web-automation"
+                ? "🌐"
+                : "🔧"}
+          </div>
+        )}
       </div>
       <div className="project-card-body">
         <div className="project-card-tags">
@@ -87,6 +102,27 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
             {all_specs.length > 6 && (
               <span className="spec-chip">+{all_specs.length - 6}</span>
             )}
+          </div>
+        )}
+        {project.demoUrl && (
+          <div style={{ marginTop: "var(--space-md)", display: "flex", justifyContent: "flex-end" }}>
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card-link"
+              style={{
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                color: "var(--accent-1)",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "4px",
+                transition: "color var(--transition-fast)"
+              }}
+            >
+              เยี่ยมชมเว็บไซต์ ↗
+            </a>
           </div>
         )}
       </div>

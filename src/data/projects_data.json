@@ -10,6 +10,7 @@
       "thumbnail": "/images/projects/cold-room-thumb.jpg",
       "gallery": []
     },
+    "demoUrl": "",
     "techSpecs": {
       "embedded": ["ESP32-S3", "DHT22", "ACS712 Current Sensor"],
       "web": ["Next.js", "Chart.js", "Responsive Dashboard"],
@@ -33,6 +34,7 @@
       "thumbnail": "/images/projects/smart-kiosk-thumb.jpg",
       "gallery": []
     },
+    "demoUrl": "",
     "techSpecs": {
       "embedded": ["Raspberry Pi 4", "Thermal Printer Module"],
       "web": ["Next.js", "Clerk Auth", "PWA"],
@@ -56,6 +58,7 @@
       "thumbnail": "/images/projects/3d-enclosure-thumb.jpg",
       "gallery": []
     },
+    "demoUrl": "",
     "techSpecs": {
       "embedded": [],
       "web": [],
@@ -66,6 +69,35 @@
       "ออกแบบช่องบอร์ด ปุ่มกด และพอร์ตเชื่อมต่ออย่างแม่นยำ",
       "เลือกวัสดุตามการใช้งาน (กันน้ำ กันความร้อน)",
       "ส่งมอบทั้งไฟล์ STL และชิ้นงานจริง"
+    ]
+  },
+  {
+    "id": "chodphiphat-commerce",
+    "title": "B2B Wood Commerce Platform",
+    "category": "web-automation",
+    "tags": ["Web", "Database", "Admin Portal"],
+    "businessOutcome": "ระบบหลังบ้านแอดมินช่วยลดเวลาบริหารสต็อกวัสดุก่อสร้างและไม้แปรรูปร้านค้าลง 70%",
+    "summary": "เว็บไซต์ธุรกิจและระบบจัดการสินค้าโชติพิพัฒน์ค้าไม้ มีหน้าแอดมินล็อกอินระบบความปลอดภัยสูงสำหรับอัปเดตและจัดการข้อมูลหลังบ้าน",
+    "media": {
+      "thumbnail": "/images/projects/chodphiphat-commerce/thump.jpg",
+      "gallery": [
+        "/images/projects/chodphiphat-commerce/gallay/image.png",
+        "/images/projects/chodphiphat-commerce/gallay/image copy.png",
+        "/images/projects/chodphiphat-commerce/gallay/image copy 2.png",
+        "/images/projects/chodphiphat-commerce/gallay/image copy 3.png"
+      ]
+    },
+    "demoUrl": "https://www.cppxmaterials.com/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "Tailwind CSS 4", "Drizzle ORM", "Neon PostgreSQL", "Cloudinary"],
+      "design3D": [],
+      "automation": ["JWT / Session Auth", "Secure Admin Portal", "RESTful API Integration"]
+    },
+    "features": [
+      "ระบบแสดงรายละเอียดวัสดุก่อสร้างแบบ Responsive รองรับมือถือ 100%",
+      "หน้าแดชบอร์ดแอดมินสำหรับการเพิ่ม/แก้ไขข้อมูลผลิตภัณฑ์แบบ Real-time",
+      "ระบบอัปโหลดรูปชิ้นงานขึ้นคลาวด์ฝากเก็บอัตโนมัติผ่าน Cloudinary"
     ]
   }
 ]
