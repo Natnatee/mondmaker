@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ProjectCard from "@/components/ProjectCard";
-import projectsData from "@/data/projects.json";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import ProjectCard from "@/components/project_card";
+import projects_data from "@/data/projects_data.json";
 
 export default function SmartIotPage() {
-  const iotProjects = projectsData.filter((p) => p.category === "smart-iot");
+  const iot_projects = projects_data.filter((p) => p.category === "smart-iot");
 
   return (
     <div className="page-wrapper">
@@ -13,7 +13,7 @@ export default function SmartIotPage() {
 
       <section className="hero">
         <div className="container">
-          <div className="hero-badge" style={{ borderColor: "rgba(0, 212, 255, 0.3)", color: "var(--color-iot)" }}>
+          <div className="hero-badge" style={{ borderColor: "rgba(2, 132, 199, 0.3)", color: "var(--color-iot)" }}>
             <span className="dot" style={{ background: "var(--color-iot)" }} />
             Smart IoT & Embedded
           </div>
@@ -36,9 +36,9 @@ export default function SmartIotPage() {
             <span className="section-label">// IoT Projects</span>
             <h2 className="section-title">ผลงาน IoT & Embedded</h2>
           </div>
-          {iotProjects.length > 0 ? (
+          {iot_projects.length > 0 ? (
             <div className="projects-grid">
-              {iotProjects.map((project) => (
+              {iot_projects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>

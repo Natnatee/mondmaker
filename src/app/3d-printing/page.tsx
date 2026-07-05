@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ProjectCard from "@/components/ProjectCard";
-import projectsData from "@/data/projects.json";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import ProjectCard from "@/components/project_card";
+import projects_data from "@/data/projects_data.json";
 
 export default function ThreeDPrintingPage() {
-  const printProjects = projectsData.filter(
+  const print_projects = projects_data.filter(
     (p) => p.category === "3d-printing"
   );
 
@@ -15,7 +15,7 @@ export default function ThreeDPrintingPage() {
 
       <section className="hero">
         <div className="container">
-          <div className="hero-badge" style={{ borderColor: "rgba(255, 107, 181, 0.3)", color: "var(--color-3d)" }}>
+          <div className="hero-badge" style={{ borderColor: "rgba(219, 39, 119, 0.3)", color: "var(--color-3d)" }}>
             <span className="dot" style={{ background: "var(--color-3d)" }} />
             3D Design & Production
           </div>
@@ -37,9 +37,9 @@ export default function ThreeDPrintingPage() {
             <span className="section-label">// 3D Projects</span>
             <h2 className="section-title">ผลงาน 3D Design & Production</h2>
           </div>
-          {printProjects.length > 0 ? (
+          {print_projects.length > 0 ? (
             <div className="projects-grid">
-              {printProjects.map((project) => (
+              {print_projects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>

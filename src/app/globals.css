@@ -1,6 +1,6 @@
 /* ============================================
    MondMaker — Global Design System
-   Premium Dark Theme with Glassmorphism
+   Premium Light Theme (Cyber Blue Accent)
    ============================================ */
 
 /* ---------- Google Font Import ---------- */
@@ -8,34 +8,34 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Colors — Sleek Dark Palette */
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #111118;
-  --bg-card: rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
-  --bg-glass: rgba(255, 255, 255, 0.05);
+  /* Colors — Clean Light Tech Palette */
+  --bg-primary: #f8fafc;        /* Off-white (Slate 50) */
+  --bg-secondary: #ffffff;      /* Pure white for depth */
+  --bg-card: rgba(15, 23, 42, 0.02); /* Subtle dark transparent */
+  --bg-card-hover: rgba(2, 132, 199, 0.04); /* Light cyber blue tint */
+  --bg-glass: rgba(255, 255, 255, 0.8);
 
-  --text-primary: #f0f0f5;
-  --text-secondary: #9494a8;
-  --text-muted: #5c5c70;
+  --text-primary: #0f172a;      /* Dark slate (Slate 900) */
+  --text-secondary: #475569;    /* Medium slate (Slate 600) */
+  --text-muted: #94a3b8;        /* Light slate (Slate 400) */
 
-  /* Accent — Electric Cyan-to-Purple Gradient */
-  --accent-1: #00d4ff;
-  --accent-2: #7b61ff;
-  --accent-3: #ff6bb5;
+  /* Accent — Premium Cyber Blue to Indigo Gradient */
+  --accent-1: #0284c7;          /* Cyber Blue (Sky 600) */
+  --accent-2: #4f46e5;          /* Indigo 600 */
+  --accent-3: #db2777;          /* Pink 600 */
   --gradient-accent: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  --gradient-accent-hover: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  --gradient-accent-hover: linear-gradient(135deg, #0369a1, #4338ca);
 
   /* Category Colors */
-  --color-iot: #00d4ff;
-  --color-web: #7b61ff;
-  --color-3d: #ff6bb5;
+  --color-iot: #0284c7;
+  --color-web: #4f46e5;
+  --color-3d: #db2777;
 
   /* Borders & Shadows */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(0, 212, 255, 0.3);
-  --shadow-card: 0 4px 30px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.08);
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-accent: rgba(2, 132, 199, 0.3);
+  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.04);
+  --shadow-glow: 0 0 30px rgba(2, 132, 199, 0.08);
 
   /* Spacing */
   --space-xs: 0.25rem;
@@ -106,7 +106,7 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.05) 1px, transparent 0);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
@@ -136,7 +136,7 @@ body::before {
   right: 0;
   z-index: 100;
   padding: var(--space-md) 0;
-  background: rgba(10, 10, 15, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
   transition: background var(--transition-normal);
@@ -155,6 +155,7 @@ body::before {
   font-weight: 800;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
 }
 
 .navbar-brand .brand-accent {
@@ -200,21 +201,35 @@ body::before {
 
 /* ---------- Hero Section ---------- */
 .hero {
-  padding: calc(var(--space-4xl) + 60px) 0 var(--space-4xl);
-  text-align: center;
+  padding: calc(var(--space-4xl) + 40px) 0 var(--space-3xl);
   position: relative;
+  overflow: hidden;
 }
 
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, transparent 70%);
   pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1.0fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .hero-badge {
@@ -227,8 +242,8 @@ body::before {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--accent-1);
-  margin-bottom: var(--space-xl);
-  background: rgba(0, 212, 255, 0.05);
+  margin-bottom: var(--space-lg);
+  background: rgba(2, 132, 199, 0.05);
   animation: fadeInUp 0.6s var(--ease-out) both;
 }
 
@@ -241,11 +256,12 @@ body::before {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.03em;
-  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
   animation: fadeInUp 0.6s var(--ease-out) 0.1s both;
 }
 
@@ -257,10 +273,10 @@ body::before {
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
   color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto var(--space-2xl);
+  max-width: 550px;
+  margin-bottom: var(--space-xl);
   line-height: 1.7;
   animation: fadeInUp 0.6s var(--ease-out) 0.2s both;
 }
@@ -279,8 +295,8 @@ body::before {
   padding: var(--space-2xl) var(--space-xl);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  background: var(--bg-card);
-  backdrop-filter: blur(10px);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
   transition:
     transform var(--transition-normal),
@@ -294,23 +310,22 @@ body::before {
 
 .category-card:hover {
   transform: translateY(-4px);
-  background: var(--bg-card-hover);
-  box-shadow: var(--shadow-card);
+  background: var(--bg-secondary);
 }
 
 .category-card.iot:hover {
-  border-color: rgba(0, 212, 255, 0.3);
-  box-shadow: 0 4px 30px rgba(0, 212, 255, 0.1);
+  border-color: rgba(2, 132, 199, 0.3);
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
 }
 
 .category-card.web:hover {
-  border-color: rgba(123, 97, 255, 0.3);
-  box-shadow: 0 4px 30px rgba(123, 97, 255, 0.1);
+  border-color: rgba(79, 70, 229, 0.3);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.08);
 }
 
 .category-card.printing:hover {
-  border-color: rgba(255, 107, 181, 0.3);
-  box-shadow: 0 4px 30px rgba(255, 107, 181, 0.1);
+  border-color: rgba(219, 39, 119, 0.3);
+  box-shadow: 0 10px 30px rgba(219, 39, 119, 0.08);
 }
 
 .category-card::before {
@@ -341,23 +356,24 @@ body::before {
 }
 
 .category-card.iot .category-icon {
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(2, 132, 199, 0.08);
   color: var(--color-iot);
 }
 
 .category-card.web .category-icon {
-  background: rgba(123, 97, 255, 0.1);
+  background: rgba(79, 70, 229, 0.08);
   color: var(--color-web);
 }
 
 .category-card.printing .category-icon {
-  background: rgba(255, 107, 181, 0.1);
+  background: rgba(219, 39, 119, 0.08);
   color: var(--color-3d);
 }
 
 .category-card h3 {
   font-size: 1.125rem;
   font-weight: 700;
+  color: var(--text-primary);
   margin-bottom: var(--space-sm);
   letter-spacing: -0.01em;
 }
@@ -406,6 +422,7 @@ body::before {
 .section-title {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
@@ -419,7 +436,8 @@ body::before {
 .project-card {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  background: var(--bg-card);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
   transition:
     transform var(--transition-normal),
@@ -430,14 +448,14 @@ body::before {
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--border-accent);
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 10px 40px rgba(2, 132, 199, 0.08);
 }
 
 .project-card-image {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   overflow: hidden;
 }
 
@@ -474,32 +492,33 @@ body::before {
 }
 
 .tag.iot {
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(2, 132, 199, 0.08);
   color: var(--color-iot);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(2, 132, 199, 0.15);
 }
 
 .tag.web {
-  background: rgba(123, 97, 255, 0.1);
+  background: rgba(79, 70, 229, 0.08);
   color: var(--color-web);
-  border: 1px solid rgba(123, 97, 255, 0.2);
+  border: 1px solid rgba(79, 70, 229, 0.15);
 }
 
 .tag.printing {
-  background: rgba(255, 107, 181, 0.1);
+  background: rgba(219, 39, 119, 0.08);
   color: var(--color-3d);
-  border: 1px solid rgba(255, 107, 181, 0.2);
+  border: 1px solid rgba(219, 39, 119, 0.15);
 }
 
 .tag.automation {
-  background: rgba(255, 187, 68, 0.1);
-  color: #ffbb44;
-  border: 1px solid rgba(255, 187, 68, 0.2);
+  background: rgba(217, 119, 6, 0.08);
+  color: #d97706;
+  border: 1px solid rgba(217, 119, 6, 0.15);
 }
 
 .project-card-title {
   font-size: 1.125rem;
   font-weight: 700;
+  color: var(--text-primary);
   margin-bottom: var(--space-sm);
   letter-spacing: -0.01em;
 }
@@ -507,7 +526,7 @@ body::before {
 .project-card-outcome {
   font-size: 0.9rem;
   color: var(--accent-1);
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: var(--space-md);
   line-height: 1.5;
 }
@@ -530,8 +549,8 @@ body::before {
 .spec-chip {
   font-size: 0.7rem;
   font-family: var(--font-mono);
-  color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  background: #f1f5f9;
   border: 1px solid var(--border-subtle);
   padding: 2px 8px;
   border-radius: var(--radius-sm);
@@ -540,6 +559,7 @@ body::before {
 /* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
   padding: var(--space-2xl) 0;
   text-align: center;
   margin-top: auto;
@@ -581,6 +601,17 @@ body::before {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
   .category-grid {
     grid-template-columns: 1fr;
   }

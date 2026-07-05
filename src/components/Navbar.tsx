@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const navLinks = [
+const nav_links = [
   { href: "/smart-iot", label: "Smart IoT" },
   { href: "/web-automation", label: "Web & AI" },
   { href: "/3d-printing", label: "3D Printing" },
@@ -14,7 +14,7 @@ export default function Navbar() {
           <span className="brand-accent">Mond</span>Maker
         </Link>
         <ul className="navbar-links">
-          {navLinks.map((link) => (
+          {nav_links.map((link) => (
             <li key={link.href}>
               <Link href={link.href}>{link.label}</Link>
             </li>

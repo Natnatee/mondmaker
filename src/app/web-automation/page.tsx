@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ProjectCard from "@/components/ProjectCard";
-import projectsData from "@/data/projects.json";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import ProjectCard from "@/components/project_card";
+import projects_data from "@/data/projects_data.json";
 
 export default function WebAutomationPage() {
-  const webProjects = projectsData.filter(
+  const web_projects = projects_data.filter(
     (p) => p.category === "web-automation"
   );
 
@@ -15,7 +15,7 @@ export default function WebAutomationPage() {
 
       <section className="hero">
         <div className="container">
-          <div className="hero-badge" style={{ borderColor: "rgba(123, 97, 255, 0.3)", color: "var(--color-web)" }}>
+          <div className="hero-badge" style={{ borderColor: "rgba(79, 70, 229, 0.3)", color: "var(--color-web)" }}>
             <span className="dot" style={{ background: "var(--color-web)" }} />
             Web & AI Automation
           </div>
@@ -37,9 +37,9 @@ export default function WebAutomationPage() {
             <span className="section-label">// Web & AI Projects</span>
             <h2 className="section-title">ผลงาน Web & AI Automation</h2>
           </div>
-          {webProjects.length > 0 ? (
+          {web_projects.length > 0 ? (
             <div className="projects-grid">
-              {webProjects.map((project) => (
+              {web_projects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>

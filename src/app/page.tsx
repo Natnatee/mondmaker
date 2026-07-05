@@ -1,8 +1,9 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ProjectCard from "@/components/ProjectCard";
-import projectsData from "@/data/projects.json";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import ProjectCard from "@/components/project_card";
+import HomeHero3D from "@/components/home_hero_3d";
+import projects_data from "@/data/projects_data.json";
 
 export default function Home() {
   return (
@@ -12,19 +13,26 @@ export default function Home() {
       {/* ── Hero Section ── */}
       <section className="hero">
         <div className="container">
-          <div className="hero-badge">
-            <span className="dot" />
-            Available for projects
+          <div className="hero-grid">
+            <div className="hero-text">
+              <div className="hero-badge">
+                <span className="dot" />
+                Available for projects
+              </div>
+              <h1>
+                Full-Stack IoT,
+                <br />
+                <span className="gradient-text">Web & AI Automation</span>
+              </h1>
+              <p className="hero-subtitle">
+                ครบจบที่คนเดียว — จากไอเดียสู่โปรโตไทป์จริง ด้วย 3D Design,
+                Embedded IoT และ Web & AI Automation
+              </p>
+            </div>
+
+            {/* ส่วนแสดงหุ่นยนต์ 3D ร่าเริง */}
+            <HomeHero3D />
           </div>
-          <h1>
-            Full-Stack IoT,
-            <br />
-            <span className="gradient-text">Web & AI Automation</span>
-          </h1>
-          <p className="hero-subtitle">
-            ครบจบที่คนเดียว — จากไอเดียสู่โปรโตไทป์จริง ด้วย 3D Design,
-            Embedded IoT และ Web & AI Automation
-          </p>
 
           {/* ── Category Navigation Cards ── */}
           <div className="category-grid">
@@ -69,7 +77,7 @@ export default function Home() {
             <h2 className="section-title">โปรเจกต์ที่โดดเด่น</h2>
           </div>
           <div className="projects-grid">
-            {projectsData.map((project) => (
+            {projects_data.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
