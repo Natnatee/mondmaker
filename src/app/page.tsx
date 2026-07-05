@@ -5,6 +5,45 @@ import ProjectCard from "@/components/project_card";
 import HomeHero3D from "@/components/home_hero_3d";
 import projects_data from "@/data/projects_data.json";
 
+function AnimatedText({ text, startDelay }: { text: string; startDelay: number }) {
+  let charCount = 0;
+  return (
+    <>
+      {text.split(" ").map((word, wordIdx, arr) => {
+        const letters = word.split("").map((char) => {
+          const delay = startDelay + charCount * 0.03;
+          charCount++;
+          return (
+            <span
+              key={charCount}
+              className="hero-letter"
+              style={{ animationDelay: `${delay}s` }}
+            >
+              {char}
+            </span>
+          );
+        });
+
+        const spaceDelay = startDelay + charCount * 0.03;
+        if (wordIdx < arr.length - 1) {
+          charCount++;
+        }
+
+        return (
+          <span key={wordIdx} style={{ display: "inline-block", whiteSpace: "nowrap" }}>
+            {letters}
+            {wordIdx < arr.length - 1 && (
+              <span className="hero-letter" style={{ animationDelay: `${spaceDelay}s` }}>
+                &nbsp;
+              </span>
+            )}
+          </span>
+        );
+      })}
+    </>
+  );
+}
+
 export default function Home() {
   return (
     <div className="page-wrapper">
@@ -20,12 +59,15 @@ export default function Home() {
                 Available for projects
               </div>
               <h1>
-                Full-Stack IoT,
-                <br />
-                <span className="gradient-text">Web & AI Automation</span>
+                <span className="hero-title-line-left" style={{ display: "flex", flexWrap: "wrap" }}>
+                  <AnimatedText text="Full-Stack IoT," startDelay={0.1} />
+                </span>
+                <span className="hero-title-line-right gradient-text" style={{ display: "flex", flexWrap: "wrap" }}>
+                  <AnimatedText text="Web & AI Automation" startDelay={0.4} />
+                </span>
               </h1>
               <p className="hero-subtitle">
-                ครบจบที่คนเดียว — จากไอเดียสู่โปรโตไทป์จริง ด้วย 3D Design,
+                ครบจบที่เดียว — จากไอเดียสู่โปรโตไทป์จริง ด้วย 3D Design,
                 Embedded IoT และ Web & AI Automation
               </p>
             </div>
