@@ -31,6 +31,88 @@ export default function ThreeDPrintingPage() {
         </div>
       </section>
 
+      {/* ── 3D Printer Specs Section ── */}
+      <section className="printer-spec-section">
+        <div className="container">
+          <div className="printer-grid">
+            {/* ฝั่งซ้าย: รูปภาพเครื่องพิมพ์ */}
+            <div className="printer-image-wrapper">
+              <img
+                src="/image-main/CentauriCarbon2.webp"
+                alt="Centauri Carbon 2 3D Printer"
+                loading="lazy"
+              />
+            </div>
+
+            {/* ฝั่งขวา: รายละเอียดสเปก */}
+            <div className="printer-details">
+              <div className="printer-title-group">
+                <span className="printer-badge">// Hardware Fleet</span>
+                <h2 className="printer-name">Centauri Carbon 2</h2>
+                <p className="printer-desc">
+                  ยกระดับการผลิตเคสอุปกรณ์และชิ้นงานต้นแบบด้วยเครื่องพิมพ์เกรดวิศวกรรมความแม่นยำสูง
+                  โครงสร้างระบบปิดที่ควบคุมสภาพแวดล้อมความร้อนได้อย่างสมบูรณ์แบบ
+                  เพื่อให้ได้งานที่ตรงสเปกและทนทานที่สุด
+                </p>
+              </div>
+
+              {/* จุดเด่นทางเทคนิค */}
+              <div className="printer-features-grid">
+                <div className="printer-feat-card">
+                  <div className="printer-feat-title">
+                    🔥 <span>หัวฉีดอุณหภูมิสูง 350°C</span>
+                  </div>
+                  <div className="printer-feat-desc">
+                    รองรับความร้อนสูงสุดถึง 350 องศาเซลเซียส สามารถหลอมเหลวและพิมพ์พลาสติกเกรดวิศวกรรมได้อย่างเสถียร
+                  </div>
+                </div>
+
+                <div className="printer-feat-card">
+                  <div className="printer-feat-title">
+                    📦 <span>Heated Bed & Chamber</span>
+                  </div>
+                  <div className="printer-feat-desc">
+                    ฐานพิมพ์ร้อน 110°C ร่วมกับห้องพิมพ์แบบปิด ควบคุมอุณหภูมิภายใน ช่วยป้องกันการหดตัวและโก่งตัวของวัสดุความเค้นสูง
+                  </div>
+                </div>
+
+                <div className="printer-feat-card">
+                  <div className="printer-feat-title">
+                    📐 <span>Precision Engineering</span>
+                  </div>
+                  <div className="printer-feat-desc">
+                    ความแม่นยำของแกนขยับระดับไมโคร ทำให้ประกอบสลัก เกลียว หรือช่องพอร์ตของเคสบอร์ด IoT ได้พอดีอย่างสมบูรณ์แบบ
+                  </div>
+                </div>
+
+                <div className="printer-feat-card">
+                  <div className="printer-feat-title">
+                    💎 <span>ชิ้นงานคุณภาพอุตสาหกรรม</span>
+                  </div>
+                  <div className="printer-feat-desc">
+                    พื้นผิวงานเรียบเนียน โครงสร้างภายในแข็งแรงสูง เหมาะสำหรับการนำไปใช้งานจริงหน้างานวิศวกรรม
+                  </div>
+                </div>
+              </div>
+
+              {/* วัสดุที่รองรับ */}
+              <div className="printer-materials">
+                <span className="printer-materials-label">Supported Materials:</span>
+                <div className="printer-materials-chips">
+                  <span className="printer-material-chip" title="สำหรับชิ้นงานทดสอบทั่วไป">PLA / PLA+</span>
+                  <span className="printer-material-chip" title="ทนแรงกระแทก เหนียว ทนสารเคมี">PETG</span>
+                  <span className="printer-material-chip" title="ยางยืดหยุ่น ทนแรงบิดและซับแรงกระแทกได้ดี">TPU (Flexible)</span>
+                  <span className="printer-material-chip" title="แข็งแรงสูง ทนความร้อน ใช้งานกลางแจ้ง">ABS / ASA</span>
+                  <span className="printer-material-chip" title="ทนแรงเสียดสี ทนความร้อนสูง ยืดหยุ่นดี">Nylon (PA)</span>
+                  <span className="printer-material-chip" title="ผสมผสานคาร์บอนไฟเบอร์ แข็งแกร่งและเบาเป็นพิเศษ">Carbon Fiber (PETG/PA-CF)</span>
+                  <span className="printer-material-chip" title="ทนแรงกระแทกสูงมาก ทนความร้อนขั้นสุด โปร่งใส">PC (Polycarbonate)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
           <div className="section-header">

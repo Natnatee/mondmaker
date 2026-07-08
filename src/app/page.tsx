@@ -79,33 +79,21 @@ export default function Home() {
           {/* ── Category Navigation Cards ── */}
           <div className="category-grid">
             <Link href="/smart-iot" className="category-card iot">
-              <div className="category-icon">⚡</div>
+              <img src="/3-main-card/iot.jpg" alt="Smart IoT & Embedded" className="category-card-bg" />
+              <div className="category-card-overlay"></div>
               <h3>Smart IoT & Embedded</h3>
-              <p>
-                ออกแบบและเขียนโปรแกรมควบคุมบอร์ด ESP32, STM32
-                เชื่อมต่อเซนเซอร์กับคลาวด์แบบเรียลไทม์
-              </p>
-              <span className="arrow">→</span>
             </Link>
 
             <Link href="/web-automation" className="category-card web">
-              <div className="category-icon">🌐</div>
+              <img src="/3-main-card/web.jpg" alt="Web & AI Automation" className="category-card-bg" />
+              <div className="category-card-overlay"></div>
               <h3>Web & AI Automation</h3>
-              <p>
-                พัฒนาเว็บแอปด้วย Next.js ต่อระบบ n8n อัตโนมัติ และ AI Agent
-                ทำงานแทนคุณ 24 ชม.
-              </p>
-              <span className="arrow">→</span>
             </Link>
 
             <Link href="/3d-printing" className="category-card printing">
-              <div className="category-icon">🔧</div>
+              <img src="/3-main-card/3d.jpg" alt="3D Design & Production" className="category-card-bg" />
+              <div className="category-card-overlay"></div>
               <h3>3D Design & Production</h3>
-              <p>
-                ออกแบบ CAD ด้วย Fusion 360 และพิมพ์เคสผลิตภัณฑ์
-                ที่แม่นยำเชิงวิศวกรรม พร้อมใช้งานจริง
-              </p>
-              <span className="arrow">→</span>
             </Link>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface ProjectData {
   id: string;
@@ -34,22 +34,39 @@ function get_tag_class(tag: string): string {
   return "web";
 }
 
-function get_all_specs(specs: ProjectData["techSpecs"]): string[] {
-  return [
-    ...specs.embedded,
-    ...specs.web,
-    ...specs.design3D,
-    ...specs.automation,
-  ].filter(Boolean);
-}
-
 export default function ProjectCard({ project }: { project: ProjectData }) {
-  const all_specs = get_all_specs(project.techSpecs);
+  const [is_modal_open, setIs_modal_open] = useState(false);
   const [selected_review_img, setSelected_review_img] = useState<string | null>(null);
+
+  // ดักจับการกดปุ่ม Escape และล็อกการ Scroll พื้นหลังเมื่อเปิด Modal
+  useEffect(() => {
+    const handle_keydown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        if (selected_review_img) {
+          setSelected_review_img(null);
+        } else {
+          setIs_modal_open(false);
+        }
+      }
+    };
+
+    if (is_modal_open || selected_review_img) {
+      window.addEventListener("keydown", handle_keydown);
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handle_keydown);
+      document.body.style.overflow = "";
+    };
+  }, [is_modal_open, selected_review_img]);
 
   return (
     <>
-      <article className="project-card">
+      <article 
+        className={`project-card ${project.category}`}
+        onClick={() => setIs_modal_open(true)}
+      >
         {/* ── ด้านหน้าการ์ด (Default View) ── */}
         <div className="project-card-front">
           <div className="project-card-image">
@@ -86,13 +103,6 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
           </div>
 
           <div className="project-card-body">
-            <div className="project-card-tags">
-              {project.tags.map((tag) => (
-                <span key={tag} className={`tag ${get_tag_class(tag)}`}>
-                  {tag}
-                </span>
-              ))}
-            </div>
             <h3 className="project-card-title">{project.title}</h3>
             <p className="project-card-outcome">{project.businessOutcome}</p>
           </div>
@@ -100,68 +110,155 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
 
         {/* ── แผ่น Overlay ด้านหลัง (Hover View) ── */}
         <div className="project-card-overlay">
-          <div className="overlay-content-wrapper">
-            <div className="overlay-header">
-              <span className="overlay-project-title">{project.title}</span>
-              <p className="overlay-project-summary">{project.summary}</p>
-            </div>
-
-            <div className="overlay-details">
-              {/* Tech Stack */}
-              {all_specs.length > 0 && (
-                <div className="overlay-section">
-                  <span className="overlay-section-label">// Tech Stack</span>
-                  <div className="project-card-specs">
-                    {all_specs.map((spec) => (
-                      <span key={spec} className="spec-chip">
-                        {spec}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* แชทรีวิวจากลูกค้า */}
-              {project.media.reviewImages && project.media.reviewImages.length > 0 && (
-                <div className="overlay-section">
-                  <span className="overlay-section-label">// Client Feedbacks</span>
-                  <div className="overlay-review-gallery">
-                    {project.media.reviewImages.map((img, idx) => (
-                      <div
-                        key={idx}
-                        className="overlay-review-item"
-                        onClick={() => setSelected_review_img(img)}
-                        style={{ cursor: "zoom-in" }}
-                      >
-                        <img
-                          src={img}
-                          alt={`รีวิวจากลูกค้า ${idx + 1}`}
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* ปุ่มลิงก์เว็บจริง */}
-          {project.demoUrl && (
-            <div className="overlay-footer-action">
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="navbar-cta-btn"
-                style={{ width: "100%", justifyContent: "center" }}
-              >
-                เยี่ยมชมเว็บไซต์จริง ↗
-              </a>
-            </div>
-          )}
+          <button className="project-card-overlay-btn">
+            ดูรายละเอียดโปรเจกต์ ➔
+          </button>
         </div>
       </article>
+
+      {/* ── Modal แสดงรายละเอียดโปรเจกต์แบบพรีเมียม ── */}
+      {is_modal_open && (
+        <div 
+          className="project-detail-modal"
+          onClick={() => setIs_modal_open(false)}
+        >
+          <div 
+            className="modal-card"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="modal-header">
+              <div className="modal-header-info">
+                <h3 className="modal-project-title">{project.title}</h3>
+                <p className="modal-project-summary">{project.summary}</p>
+              </div>
+              <button 
+                className="modal-close-btn"
+                onClick={() => setIs_modal_open(false)}
+                aria-label="Close modal"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Body */}
+            <div className="modal-body">
+              {/* ฝั่งซ้าย: Outcome & Features */}
+              <div>
+                {project.businessOutcome && (
+                  <div className="modal-section">
+                    <span className="modal-section-title">Business Outcome</span>
+                    <div className="modal-outcome-box">
+                      {project.businessOutcome}
+                    </div>
+                  </div>
+                )}
+
+                {project.features && project.features.length > 0 && (
+                  <div className="modal-section">
+                    <span className="modal-section-title">Key Features</span>
+                    <ul className="features-list">
+                      {project.features.map((feature, idx) => (
+                        <li key={idx}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              {/* ฝั่งขวา: Tech Stack & Client Feedbacks */}
+              <div>
+                {/* Tech Specs */}
+                <div className="modal-section">
+                  <span className="modal-section-title">Tech Specs</span>
+                  <div className="modal-specs-group">
+                    {project.techSpecs.embedded && project.techSpecs.embedded.length > 0 && (
+                      <div className="modal-spec-category">
+                        <span className="modal-spec-category-title embedded">// Embedded & Hardware</span>
+                        <div className="modal-spec-chips">
+                          {project.techSpecs.embedded.map((spec) => (
+                            <span key={spec} className="modal-spec-chip">{spec}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {project.techSpecs.web && project.techSpecs.web.length > 0 && (
+                      <div className="modal-spec-category">
+                        <span className="modal-spec-category-title web">// Web & Software</span>
+                        <div className="modal-spec-chips">
+                          {project.techSpecs.web.map((spec) => (
+                            <span key={spec} className="modal-spec-chip">{spec}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {project.techSpecs.design3D && project.techSpecs.design3D.length > 0 && (
+                      <div className="modal-spec-category">
+                        <span className="modal-spec-category-title design3D">// 3D Design & Printing</span>
+                        <div className="modal-spec-chips">
+                          {project.techSpecs.design3D.map((spec) => (
+                            <span key={spec} className="modal-spec-chip">{spec}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {project.techSpecs.automation && project.techSpecs.automation.length > 0 && (
+                      <div className="modal-spec-category">
+                        <span className="modal-spec-category-title automation">// Integration & Automation</span>
+                        <div className="modal-spec-chips">
+                          {project.techSpecs.automation.map((spec) => (
+                            <span key={spec} className="modal-spec-chip">{spec}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Client Feedbacks */}
+                {project.media.reviewImages && project.media.reviewImages.length > 0 && (
+                  <div className="modal-section">
+                    <span className="modal-section-title">Client Feedbacks</span>
+                    <div className="modal-review-gallery">
+                      {project.media.reviewImages.map((img, idx) => (
+                        <div
+                          key={idx}
+                          className="modal-review-item"
+                          onClick={() => setSelected_review_img(img)}
+                          style={{ cursor: "zoom-in" }}
+                        >
+                          <img
+                            src={img}
+                            alt={`รีวิวจากลูกค้า ${idx + 1}`}
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Footer */}
+            {project.demoUrl && (
+              <div className="modal-footer">
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="navbar-cta-btn"
+                >
+                  เยี่ยมชมเว็บไซต์จริง ↗
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* ── Lightbox Modal แสดงภาพรีวิวขนาดใหญ่ ── */}
       {selected_review_img && (
@@ -195,3 +292,4 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
     </>
   );
 }
+
