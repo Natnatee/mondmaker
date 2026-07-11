@@ -32,7 +32,7 @@ export function get_projects_data(): ProjectData[] {
 
   return projects.map((project) => {
     const project_slug = project.id;
-    const base_dir = path.join(process.cwd(), "public", "images", "projects", project_slug);
+    const base_dir = path.join(process.cwd(), "public", "projects", project_slug);
 
     try {
       // 1. ดึงภาพ Thumbnail (สแกนหาไฟล์รูปแรกที่พบในโฟลเดอร์ thumbnail/)
@@ -46,7 +46,7 @@ export function get_projects_data(): ProjectData[] {
           SUPPORTED_EXTENSIONS.includes(path.extname(file).toLowerCase())
         );
         if (img_file) {
-          thumbnail_path = `/images/projects/${project_slug}/thumbnail/${img_file}`;
+          thumbnail_path = `/projects/${project_slug}/thumbnail/${img_file}`;
         }
       }
       project.media.thumbnail = thumbnail_path;
@@ -59,7 +59,7 @@ export function get_projects_data(): ProjectData[] {
         const files = fs.readdirSync(gallery_dir);
         files.forEach((file) => {
           if (SUPPORTED_EXTENSIONS.includes(path.extname(file).toLowerCase())) {
-            gallery_images.push(`/images/projects/${project_slug}/gallery/${file}`);
+            gallery_images.push(`/projects/${project_slug}/gallery/${file}`);
           }
         });
       }
@@ -76,7 +76,7 @@ export function get_projects_data(): ProjectData[] {
         const files = fs.readdirSync(review_dir);
         files.forEach((file) => {
           if (SUPPORTED_EXTENSIONS.includes(path.extname(file).toLowerCase())) {
-            review_images.push(`/images/projects/${project_slug}/review/${file}`);
+            review_images.push(`/projects/${project_slug}/review/${file}`);
           }
         });
       }

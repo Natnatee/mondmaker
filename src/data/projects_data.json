@@ -11,16 +11,16 @@
     "businessOutcome": "ระบบหลังบ้านแอดมินช่วยลดเวลาบริหารสต็อกวัสดุก่อสร้างและไม้แปรรูปร้านค้าลง 70%",
     "summary": "เว็บไซต์ธุรกิจและระบบจัดการสินค้าโชติพิพัฒน์ค้าไม้ มีหน้าแอดมินล็อกอินระบบความปลอดภัยสูงสำหรับอัปเดตและจัดการข้อมูลหลังบ้าน",
     "media": {
-      "thumbnail": "/images/projects/chodphiphat-commerce/thumbnail/t1.jpg",
+      "thumbnail": "/projects/chodphiphat-commerce/thumbnail/t1.jpg",
       "gallery": [
-        "/images/projects/chodphiphat-commerce/gallery/g1.png",
-        "/images/projects/chodphiphat-commerce/gallery/g2.png",
-        "/images/projects/chodphiphat-commerce/gallery/g3.png",
-        "/images/projects/chodphiphat-commerce/gallery/g4.png"
+        "/projects/chodphiphat-commerce/gallery/g1.png",
+        "/projects/chodphiphat-commerce/gallery/g2.png",
+        "/projects/chodphiphat-commerce/gallery/g3.png",
+        "/projects/chodphiphat-commerce/gallery/g4.png"
       ],
       "reviewImages": [
-        "/images/projects/chodphiphat-commerce/review/r1.png",
-        "/images/projects/chodphiphat-commerce/review/r2.png"
+        "/projects/chodphiphat-commerce/review/r1.png",
+        "/projects/chodphiphat-commerce/review/r2.png"
       ]
     },
     "demoUrl": "https://www.cppxmaterials.com/",
@@ -60,12 +60,12 @@
     "businessOutcome": "ระบบคัดกรองเสียงไอเด็กเล็กด้วย AI ช่วยประเมินความเสี่ยงโรคทางเดินหายใจเบื้องต้นแบบเรียลไทม์ และแจ้งเตือนผ่าน Line Notify ทันที",
     "summary": "ระบบดักจับและวิเคราะห์เสียงไอของเด็กอายุ 0-5 ปี ด้วยอุปกรณ์ IoT ขนาดพกพา ทำงานร่วมกับระบบวิเคราะห์เสียงไอ (Acoustic Machine Learning) และแสดงผลสรุปรายงานพร้อมแจ้งเตือนผ่าน LINE OA / Line Notify สำหรับผู้ปกครอง",
     "media": {
-      "thumbnail": "/images/projects/icough-analytic/thumbnail/t1.png",
+      "thumbnail": "/projects/icough-analytic/thumbnail/t1.png",
       "gallery": [
-        "/images/projects/icough-analytic/gallery/g1.png"
+        "/projects/icough-analytic/gallery/g1.png"
       ],
       "reviewImages": [
-        "/images/projects/icough-analytic/review/r1.png"
+        "/projects/icough-analytic/review/r1.png"
       ]
     },
     "demoUrl": "https://i-cough.vercel.app/",
