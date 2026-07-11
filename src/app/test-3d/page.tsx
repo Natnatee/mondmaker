@@ -15,11 +15,7 @@ const test_models = [
     url: "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
   },
   {
-    name: "Robot Dance (4.2 MB - แนะนำ)",
-    url: "/3d-model/robot_dance.glb",
-  },
-  {
-    name: "Cheerful Robot (8.8 MB)",
+    name: "Cheerful Robot (8.8 MB - แนะนำ)",
     url: "/3d-model/cheerful_robot.glb",
   },
   {

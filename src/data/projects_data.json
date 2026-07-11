@@ -97,5 +97,56 @@
       "Line Notification: แจ้งเตือนผู้ปกครองผ่าน Line Notify ทันทีพร้อมลิงก์รายงานผลการวิเคราะห์เมื่อตรวจพบอาการเสี่ยงสูง",
       "Web App Dashboard: แสดงสรุปรายงานผลการวิเคราะห์เปรียบเทียบอาการพร้อม Checklist 4 ข้อเพื่อประเมินระดับความรุนแรง (สีเขียว/เหลือง/แดง)"
     ]
+  },
+  {
+    "id": "n8n-facebook",
+    "title": "Facebook Page AI Automation Chatbot",
+    "category": "web-automation",
+    "tags": ["n8n", "AI Chatbot", "Facebook API", "Automation"],
+    "businessOutcome": "ระบบแชตบอทอัจฉริยะช่วยตอบและจัดการลูกค้าบน Facebook Page อัตโนมัติ 24 ชั่วโมง ลดภาระงานแอดมินลง 80%",
+    "summary": "ระบบ AI Automation บน Facebook Page พัฒนาด้วย n8n ทำหน้าที่รับข้อความจากลูกค้าผ่าน Webhook นำมาประมวลผลด้วย AI Agent เพื่อตอบคำถามและบันทึกประวัติการคุย",
+    "media": {
+      "thumbnail": "/projects/n8n-facebook/thumbnail/t1.png",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["n8n Workflow", "Facebook Graph API", "OpenAI API", "Node.js"],
+      "design3D": [],
+      "automation": ["Automated Lead Management", "AI Sentiment Classifier"]
+    },
+    "features": [
+      "ระบบรับและตอบกลับข้อความแบบ Real-time ผ่าน Facebook Webhook",
+      "ใช้ AI Agent ในการจำแนกประเภทคำถามและวิเคราะห์ความต้องการของลูกค้า",
+      "จัดเก็บข้อมูลผู้ติดต่อและสรุปประเด็นการคุยลงระบบโดยอัตโนมัติ"
+    ]
+  },
+  {
+    "id": "openclaw-macbook-setup",
+    "title": "OpenClaw macOS Setup & Integration",
+    "category": "web-automation",
+    "tags": ["OpenClaw", "macOS", "AI Agent", "Claude 3.5", "AnyDesk"],
+    "businessOutcome": "ติดตั้งและตั้งค่าระบบ AI Agent (OpenClaw) บน MacBook Air ผ่าน AnyDesk ให้พร้อมสั่งงานด้วยโมเดล Claude ครบวงจร ช่วยให้สั่งการเครื่องจากระยะไกลได้อย่างรวดเร็วและปลอดภัย",
+    "summary": "บริการติดตั้งและตั้งค่าระบบ AI Agent อัตโนมัติ (OpenClaw) ผ่านโปรแกรมรีโมต AnyDesk ลงบนเครื่อง MacBook Air ของลูกค้า พร้อมเปิดใช้สิทธิ์ระบบและต่อเข้ากับ API ของ Anthropic Claude 3.5",
+    "media": {
+      "thumbnail": "/projects/openclaw-macbook-setup/thumbnail/t1.png",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["macOS", "OpenClaw Engine", "Anthropic Claude API"],
+      "design3D": [],
+      "automation": ["AnyDesk Remote Support", "macOS System Hooks", "TCC Permission Setup"]
+    },
+    "features": [
+      "ติดตั้งซอฟต์แวร์ OpenClaw Engine ลงบน macOS ของลูกค้าผ่านระบบรีโมต AnyDesk",
+      "ตั้งค่าการอนุญาตระดับระบบ (macOS TCC Permissions) เพื่อให้ AI สามารถจัดการไฟล์และทำงานอย่างปลอดภัย",
+      "เชื่อมโยงและทดสอบระบบเข้ากับ API Key ของ Anthropic Claude 3.5 (หรือ Extra Usage)",
+      "ทดสอบสั่งการควบคุมระบบไฟล์ คัดลอกเอกสาร และรันคำสั่ง Terminal ผ่านแอปพลิเคชันส่งข้อความ"
+    ]
   }
 ]

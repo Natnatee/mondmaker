@@ -175,8 +175,8 @@ export default function HomeHero3D() {
       {/* model-viewer - ซ่อนจนกว่าจะโหลดเสร็จ */}
       <model-viewer
         ref={viewer_ref as any}
-        src="/3d-model/cheerful_robot.glb"
-        alt="Cheerful Robot 3D Model by MondMaker"
+        src="/3d-model/360_sphere_robot (1).glb"
+        alt="360 Sphere Robot 3D Model by MondMaker"
         loading="eager"
         reveal="auto"
         auto-rotate
