@@ -3,7 +3,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProjectCard from "@/components/project_card";
 import HomeHero3D from "@/components/home_hero_3d";
-import projects_data from "@/data/projects_data.json";
+import { get_projects_data } from "@/lib/projects_loader";
 
 function AnimatedText({ text, startDelay }: { text: string; startDelay: number }) {
   let charCount = 0;
@@ -45,6 +45,7 @@ function AnimatedText({ text, startDelay }: { text: string; startDelay: number }
 }
 
 export default function Home() {
+  const projects_data = get_projects_data();
   return (
     <div className="page-wrapper">
       <Navbar />

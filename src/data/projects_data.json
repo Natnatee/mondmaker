@@ -3,33 +3,99 @@
     "id": "chodphiphat-commerce",
     "title": "B2B Wood Commerce Platform",
     "category": "web-automation",
-    "tags": ["Web", "Database", "Admin Portal"],
+    "tags": [
+      "Web",
+      "Database",
+      "Admin Portal"
+    ],
     "businessOutcome": "ระบบหลังบ้านแอดมินช่วยลดเวลาบริหารสต็อกวัสดุก่อสร้างและไม้แปรรูปร้านค้าลง 70%",
     "summary": "เว็บไซต์ธุรกิจและระบบจัดการสินค้าโชติพิพัฒน์ค้าไม้ มีหน้าแอดมินล็อกอินระบบความปลอดภัยสูงสำหรับอัปเดตและจัดการข้อมูลหลังบ้าน",
     "media": {
-      "thumbnail": "/images/projects/chodphiphat-commerce/thump.jpg",
+      "thumbnail": "/images/projects/chodphiphat-commerce/thumbnail/t1.jpg",
       "gallery": [
-        "/images/projects/chodphiphat-commerce/gallay/image.png",
-        "/images/projects/chodphiphat-commerce/gallay/image copy.png",
-        "/images/projects/chodphiphat-commerce/gallay/image copy 2.png",
-        "/images/projects/chodphiphat-commerce/gallay/image copy 3.png"
+        "/images/projects/chodphiphat-commerce/gallery/g1.png",
+        "/images/projects/chodphiphat-commerce/gallery/g2.png",
+        "/images/projects/chodphiphat-commerce/gallery/g3.png",
+        "/images/projects/chodphiphat-commerce/gallery/g4.png"
       ],
       "reviewImages": [
-        "/images/projects/chodphiphat-commerce/review/image.png",
-        "/images/projects/chodphiphat-commerce/review/image copy.png"
+        "/images/projects/chodphiphat-commerce/review/r1.png",
+        "/images/projects/chodphiphat-commerce/review/r2.png"
       ]
     },
     "demoUrl": "https://www.cppxmaterials.com/",
     "techSpecs": {
       "embedded": [],
-      "web": ["Next.js 16", "Tailwind CSS 4", "Drizzle ORM", "Neon PostgreSQL", "Cloudinary"],
+      "web": [
+        "Next.js 16",
+        "Tailwind CSS 4",
+        "Drizzle ORM",
+        "Neon PostgreSQL",
+        "Cloudinary"
+      ],
       "design3D": [],
-      "automation": ["JWT / Session Auth", "Secure Admin Portal", "RESTful API Integration"]
+      "automation": [
+        "JWT / Session Auth",
+        "Secure Admin Portal",
+        "RESTful API Integration"
+      ]
     },
     "features": [
       "ระบบแสดงรายละเอียดวัสดุก่อสร้างแบบ Responsive รองรับมือถือ 100%",
       "หน้าแดชบอร์ดแอดมินสำหรับการเพิ่ม/แก้ไขข้อมูลผลิตภัณฑ์แบบ Real-time",
       "ระบบอัปโหลดรูปชิ้นงานขึ้นคลาวด์ฝากเก็บอัตโนมัติผ่าน Cloudinary"
+    ]
+  },
+  {
+    "id": "icough-analytic",
+    "title": "iCough Analytic - AI Cough Detector for Children",
+    "category": "smart-iot",
+    "tags": [
+      "ESP32-C3",
+      "FastAPI",
+      "Next.js",
+      "Acoustic ML",
+      "Supabase"
+    ],
+    "businessOutcome": "ระบบคัดกรองเสียงไอเด็กเล็กด้วย AI ช่วยประเมินความเสี่ยงโรคทางเดินหายใจเบื้องต้นแบบเรียลไทม์ และแจ้งเตือนผ่าน Line Notify ทันที",
+    "summary": "ระบบดักจับและวิเคราะห์เสียงไอของเด็กอายุ 0-5 ปี ด้วยอุปกรณ์ IoT ขนาดพกพา ทำงานร่วมกับระบบวิเคราะห์เสียงไอ (Acoustic Machine Learning) และแสดงผลสรุปรายงานพร้อมแจ้งเตือนผ่าน LINE OA / Line Notify สำหรับผู้ปกครอง",
+    "media": {
+      "thumbnail": "/images/projects/icough-analytic/thumbnail/t1.png",
+      "gallery": [
+        "/images/projects/icough-analytic/gallery/g1.png"
+      ],
+      "reviewImages": [
+        "/images/projects/icough-analytic/review/r1.png"
+      ]
+    },
+    "demoUrl": "https://i-cough.vercel.app/",
+    "techSpecs": {
+      "embedded": [
+        "ESP32-C3 (Lolin C3 Mini)",
+        "INMP441 I2S Microphone",
+        "Pre-buffer RAM & LittleFS Storage",
+        "SoftAP + Captive Portal WiFi Config"
+      ],
+      "web": [
+        "Next.js",
+        "Supabase DB & Storage",
+        "HTTPS Nginx SSL"
+      ],
+      "design3D": [
+        "3D Printed Case (Elegoo 3D Printer)"
+      ],
+      "automation": [
+        "FastAPI Backend Server",
+        "Acoustic ML (CNN + Google HeAR Ensemble)",
+        "Line Notify Integration"
+      ]
+    },
+    "features": [
+      "บันทึกเสียงแบบเรียลไทม์ด้วย ESP32-C3: ใช้ไมค์ INMP441 อัดเสียงผ่าน I2S ลงบน Flash RAM + LittleFS พร้อมกลไกความปลอดภัยลบไฟล์ทิ้งทันทีเมื่อส่งสำเร็จ",
+      "WiFi Setup Mode: มีปุ่มกดสลับโหมดเปิด SoftAP + Captive Portal หน้าตาพรีเมียมสำหรับตั้งค่าการเชื่อมต่อ WiFi",
+      "ระบบวิเคราะห์เสียง AI (Acoustic ML): ใช้โมเดล Ensemble (CNN + Google HeAR + Acoustic ML) ในการวิเคราะห์จำแนกโรค 4 คลาสหลัก ความแม่นยำสูง",
+      "Line Notification: แจ้งเตือนผู้ปกครองผ่าน Line Notify ทันทีพร้อมลิงก์รายงานผลการวิเคราะห์เมื่อตรวจพบอาการเสี่ยงสูง",
+      "Web App Dashboard: แสดงสรุปรายงานผลการวิเคราะห์เปรียบเทียบอาการพร้อม Checklist 4 ข้อเพื่อประเมินระดับความรุนแรง (สีเขียว/เหลือง/แดง)"
     ]
   }
 ]

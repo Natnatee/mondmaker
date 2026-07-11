@@ -2,9 +2,10 @@ import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProjectCard from "@/components/project_card";
-import projects_data from "@/data/projects_data.json";
+import { get_projects_data } from "@/lib/projects_loader";
 
 export default function ThreeDPrintingPage() {
+  const projects_data = get_projects_data();
   const print_projects = projects_data.filter(
     (p) => p.category === "3d-printing"
   );
