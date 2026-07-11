@@ -27,6 +27,27 @@ export default function HomeHero3D() {
     return () => clearInterval(interval);
   }, [is_loaded]);
 
+  // ตรวจจับว่า model-viewer script โหลดเสร็จหรือยัง (กรณีกลับมาหน้านี้หลังจากเปลี่ยนหน้า)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    let is_active = true;
+
+    if (window.customElements?.get("model-viewer")) {
+      set_script_ready(true);
+    } else {
+      window.customElements?.whenDefined("model-viewer").then(() => {
+        if (is_active) {
+          set_script_ready(true);
+        }
+      });
+    }
+
+    return () => {
+      is_active = false;
+    };
+  }, []);
+
   useEffect(() => {
     if (!script_ready) return;
 
