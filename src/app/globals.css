@@ -1044,26 +1044,44 @@ body::before {
   gap: 8px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text-secondary);
   padding: 10px 20px;
-  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
-  background: var(--bg-primary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
 }
 
-.contact-item:hover {
-  border-color: var(--accent-1);
-  color: var(--accent-1);
+.contact-svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+/* ปุ่มโทรศัพท์ - พื้นหลังฟ้าตัวหนังสือขาว */
+.contact-item.phone {
+  background: linear-gradient(135deg, var(--accent-1) 0%, #0270a9 100%);
+  color: #ffffff;
+}
+
+.contact-item.phone:hover {
+  background: linear-gradient(135deg, #028fdc 0%, var(--accent-1) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.2);
+  color: #ffffff;
+}
+
+/* ปุ่ม LINE - พื้นหลังเขียวตัวหนังสือขาว */
+.contact-item.line {
+  background: linear-gradient(135deg, #06c755 0%, #05a947 100%);
+  color: #ffffff;
 }
 
 .contact-item.line:hover {
-  border-color: #06c755;
-  color: #06c755;
-  background: rgba(6, 199, 85, 0.04);
-  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.08);
+  background: linear-gradient(135deg, #05b34c 0%, #04933e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(6, 199, 85, 0.25);
+  color: #ffffff;
 }
 
 .footer-bottom {
@@ -1427,4 +1445,40 @@ body::before {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
   }
+}
+
+/* ---------- Project Detail Modal Gallery ---------- */
+.modal-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.modal-gallery-item {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-primary);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.02);
+  transition: all var(--transition-fast);
+}
+
+.modal-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-fast);
+}
+
+.modal-gallery-item:hover {
+  transform: scale(1.03);
+  border-color: var(--accent-1);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.1);
+}
+
+.modal-gallery-item:hover img {
+  transform: scale(1.05);
 }

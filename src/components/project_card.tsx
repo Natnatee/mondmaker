@@ -164,6 +164,28 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
                     </ul>
                   </div>
                 )}
+
+                {project.media.gallery && project.media.gallery.length > 0 && (
+                  <div className="modal-section">
+                    <span className="modal-section-title">Project Gallery</span>
+                    <div className="modal-gallery-grid">
+                      {project.media.gallery.map((img, idx) => (
+                        <div
+                          key={idx}
+                          className="modal-gallery-item"
+                          onClick={() => setSelected_review_img(img)}
+                          style={{ cursor: "zoom-in" }}
+                        >
+                          <img
+                            src={img}
+                            alt={`Gallery Showcase ${idx + 1}`}
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* ฝั่งขวา: Tech Stack & Client Feedbacks */}
