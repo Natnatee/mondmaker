@@ -15,6 +15,7 @@ export interface ProjectData {
     reviewImages?: string[];
   };
   demoUrl?: string;
+  featured?: boolean;
   techSpecs: {
     embedded: string[];
     web: string[];

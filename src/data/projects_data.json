@@ -3,6 +3,7 @@
     "id": "chodphiphat-commerce",
     "title": "B2B Wood Commerce Platform",
     "category": "web-automation",
+    "featured": true,
     "tags": [
       "Web",
       "Database",
@@ -50,6 +51,7 @@
     "id": "icough-analytic",
     "title": "iCough Analytic - AI Cough Detector for Children",
     "category": "smart-iot",
+    "featured": true,
     "tags": [
       "ESP32-C3",
       "FastAPI",
@@ -102,6 +104,7 @@
     "id": "n8n-facebook",
     "title": "Facebook Page AI Automation Chatbot",
     "category": "web-automation",
+    "featured": false,
     "tags": ["n8n", "AI Chatbot", "Facebook API", "Automation"],
     "businessOutcome": "ระบบแชตบอทอัจฉริยะช่วยตอบและจัดการลูกค้าบน Facebook Page อัตโนมัติ 24 ชั่วโมง ลดภาระงานแอดมินลง 80%",
     "summary": "ระบบ AI Automation บน Facebook Page พัฒนาด้วย n8n ทำหน้าที่รับข้อความจากลูกค้าผ่าน Webhook นำมาประมวลผลด้วย AI Agent เพื่อตอบคำถามและบันทึกประวัติการคุย",
@@ -127,6 +130,7 @@
     "id": "openclaw-macbook-setup",
     "title": "OpenClaw macOS Setup & Integration",
     "category": "web-automation",
+    "featured": false,
     "tags": ["OpenClaw", "macOS", "AI Agent", "Claude 3.5", "AnyDesk"],
     "businessOutcome": "ติดตั้งและตั้งค่าระบบ AI Agent (OpenClaw) บน MacBook Air ผ่าน AnyDesk ให้พร้อมสั่งงานด้วยโมเดล Claude ครบวงจร ช่วยให้สั่งการเครื่องจากระยะไกลได้อย่างรวดเร็วและปลอดภัย",
     "summary": "บริการติดตั้งและตั้งค่าระบบ AI Agent อัตโนมัติ (OpenClaw) ผ่านโปรแกรมรีโมต AnyDesk ลงบนเครื่อง MacBook Air ของลูกค้า พร้อมเปิดใช้สิทธิ์ระบบและต่อเข้ากับ API ของ Anthropic Claude 3.5",
@@ -153,6 +157,7 @@
     "id": "ar-basketball",
     "title": "WebAR Basketball Game",
     "category": "web-automation",
+    "featured": true,
     "tags": [
       "WebAR",
       "Three.js",
@@ -208,6 +213,7 @@
     "id": "esp32-eye-robot",
     "title": "ESP32-C3 Expressive Eye Robot",
     "category": "smart-iot",
+    "featured": true,
     "tags": [
       "ESP32-C3",
       "OLED SH1106",
@@ -250,6 +256,46 @@
       "WiFi NTP Clock Mode: โหมดนาฬิกาดิจิทัลตัวเลขขนาดใหญ่ เชื่อมต่อ Wi-Fi ซิงค์เวลาโลกอัตโนมัติ พร้อมระบบข้ามเพื่อใช้งานออฟไลน์หากไม่พบสัญญาณใน 10 วินาที",
       "Playable Offline Dino Game: มินิเกมกระโดดหลบกระบองเพชรเล่นแก้เบื่อได้ทุกที่โดยไม่ต้องต่อเน็ต พร้อมระบบเก็บประวัติคะแนนสูงสุด (High Score)",
       "Single-Button Interface: ควบคุมสั่งงานง่ายด้วยปุ่มเดียว แยกการกดสั้น (กระโดด/เปลี่ยนอารมณ์ชั่วคราว) และกดแช่ 1 วินาที (สลับโหมดหลัก)"
+    ]
+  },
+  {
+    "id": "3d-orange-dino",
+    "title": "3D Printed Orange Dino Model",
+    "category": "3d-printing",
+    "tags": [
+      "3D Printing",
+      "PLA+ Rapid",
+      "Model Art",
+      "Centauri Carbon 2"
+    ],
+    "businessOutcome": "สาธิตความแม่นยำและระดับความเนียนเรียบของชิ้นงานตกแต่ง 3D (Aesthetic model) ที่ขึ้นรูปด้วยเครื่องพิมพ์เกรดอุตสาหกรรมในเวลาที่สั้นลง 50%",
+    "summary": "โมเดลไดโนเสาร์สีส้มขึ้นรูปสามมิติด้วยเครื่องพิมพ์ความเร็วสูง Centauri Carbon 2 และวัสดุ PLA+ Rapid แสดงความละเอียดของชั้นเลเยอร์และการแกะซับพอร์ตที่สะอาดเรียบร้อย",
+    "media": {
+      "thumbnail": "/3-main-card/3d.jpg",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "",
+    "techSpecs": {
+      "embedded": [],
+      "web": [],
+      "design3D": [
+        "PLA+ Rapid (High-Flow Orange)",
+        "Centauri Carbon 2 (3D Printer)",
+        "OrcaSlicer (G-code Generator)",
+        "High-Speed Print Profile (0.2mm Layer Height)"
+      ],
+      "automation": [
+        "Retraction Optimization (ลดเศษเส้นพลาสติก)",
+        "Dynamic Cooling Control (เป่าพัดลมช่วยแข็งตัว)",
+        "Support Geometry Optimization (ซับพอร์ตแกะง่าย)"
+      ]
+    },
+    "features": [
+      "High-Flow PLA+ Rapid Material: ขึ้นรูปด้วยเส้นพลาสติกเกรดความเร็วสูง ทนแรงกระแทกได้ดีกว่า PLA ทั่วไป สีส้มสดใสคมชัด",
+      "Layer Alignment Precision: ความละเอียดชั้นเลเยอร์เสมอกันตลอดทั้งชิ้นงาน แสดงขีดความสามารถด้านความแม่นยำแกนกลไกของเครื่องพิมพ์",
+      "Support Optimization: ออกแบบโครงสร้างรองรับ (Support) แบบต้นไม้ (Tree Support) ที่แกะออกง่าย ไม่ทิ้งคราบรอยและรอยแผลบนผิวโมเดลหลัก",
+      "High-Speed Cooling: ใช้ระบบเป่าลมรอบทิศทางเพื่อให้พลาสติกแข็งตัวได้ทันต่อความเร็วการพิมพ์ระดับ 300+ mm/s ป้องกันปัญหางานย้วยหรือเสียทรง"
     ]
   }
 ]

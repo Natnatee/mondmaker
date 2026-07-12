@@ -16,6 +16,7 @@ interface ProjectData {
     videoUrl?: string;
   };
   demoUrl?: string;
+  featured?: boolean;
   techSpecs: {
     embedded: string[];
     web: string[];

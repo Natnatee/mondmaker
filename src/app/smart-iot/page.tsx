@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProjectCard from "@/components/project_card";
+import TechStack from "@/components/tech_stack";
 import { get_projects_data } from "@/lib/projects_loader";
 
 export default function SmartIotPage() {
@@ -48,7 +49,15 @@ export default function SmartIotPage() {
               กำลังเพิ่มผลงาน...
             </p>
           )}
-          <div style={{ textAlign: "center", marginTop: "var(--space-3xl)" }}>
+        </div>
+      </section>
+
+      {/* ── Tech Stack & Skills Section ── */}
+      <TechStack category="smart-iot" />
+
+      <section>
+        <div className="container">
+          <div style={{ textAlign: "center", marginTop: "var(--space-xl)", marginBottom: "var(--space-2xl)" }}>
             <Link href="/" style={{ color: "var(--text-secondary)", fontSize: "0.875rem" }}>
               ← กลับหน้าหลัก
             </Link>
