@@ -47,8 +47,8 @@ function AnimatedText({ text, startDelay }: { text: string; startDelay: number }
 
 export default function Home() {
   const projects_data = get_projects_data();
-  // กรองแสดงผลเฉพาะโปรเจกต์เด่นที่หน้าแรก
-  const featured_projects = projects_data.filter((p) => p.featured);
+  // กรองแสดงผลเฉพาะโปรเจกต์เด่นที่หน้าแรก (จำกัดสูงสุด 6 การ์ด)
+  const featured_projects = projects_data.filter((p) => p.featured).slice(0, 6);
 
   return (
     <div className="page-wrapper">
@@ -64,8 +64,6 @@ export default function Home() {
                 Available for New Projects
               </div>
               <h1>
-                สวัสดีครับ ผมชื่อ <span className="gradient-text">ม่อน</span>
-                <br />
                 <span className="animated-text-container">
                   <AnimatedText text="MondMaker" startDelay={0} />
                 </span>

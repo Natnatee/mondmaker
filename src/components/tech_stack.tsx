@@ -12,28 +12,28 @@ interface TechCategory {
   skills: Skill[];
 }
 
-// ── ข้อมูลเฉพาะทางฝั่ง IoT & MCU หลังปรับปรุง (เอา Sensor ออก / เลือกเฉพาะชิ้นเด่น) ──
+// ── ข้อมูลเฉพาะทางฝั่ง IoT & MCU (ใช้โลโก้สถาปัตยกรรมชิปและค่ายผู้ผลิตที่เป็นทางการ) ──
 const iot_hardware: Skill[] = [
-  { name: "ESP32 (C3/C6 / S3-CAM)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-  { name: "STM32 (F103C6T6 / F401C6T6)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
-  { name: "CH32V003 (RISC-V MCU)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg" },
-  { name: "PY32F002A (ARM Cortex-M0+)", logo: "" },
+  { name: "ESP32 (C3/C6 / S3-CAM)", logo: "https://cdn.simpleicons.org/espressif/E02E2B" },
+  { name: "STM32 (F103C6T6 / F401C6T6)", logo: "https://cdn.simpleicons.org/stmicroelectronics/032347" },
+  { name: "CH32V003 (RISC-V MCU)", logo: "https://cdn.simpleicons.org/riscv/F12821" }, // โลโก้ RISC-V สีส้มทางการ
+  { name: "PY32F002A (ARM Cortex-M0+)", logo: "https://cdn.simpleicons.org/arm/0091BA" }, // โลโก้ ARM ทางการ
   { name: "Raspberry Pi 4 Model B", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" },
-  { name: "Orange Pi Zero 2W (SBC)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" }
+  { name: "Orange Pi Zero 2W (SBC)", logo: "" } // Fallback to 🍊
 ];
 
 const iot_protocols: Skill[] = [
-  { name: "MQTT & WebSockets", logo: "https://raw.githubusercontent.com/mqtt/mqtt.org/master/site/images/mqtt-logo.svg" },
-  { name: "ESP-NOW", logo: "" },
-  { name: "Bluetooth Low Energy (BLE)", logo: "" },
-  { name: "Thread / Matter", logo: "" },
-  { name: "HTTPS", logo: "" }
+  { name: "MQTT & WebSockets", logo: "https://cdn.simpleicons.org/mqtt/660066" },
+  { name: "ESP-NOW", logo: "https://cdn.simpleicons.org/espressif/E02E2B" }, // ใช้โลโก้ Espressif ผู้คิดค้นโปรโตคอลนี้
+  { name: "Bluetooth Low Energy (BLE)", logo: "https://cdn.simpleicons.org/bluetooth/0082FC" },
+  { name: "Thread / Matter", logo: "https://cdn.simpleicons.org/matter/E60028" },
+  { name: "HTTPS", logo: "https://cdn.simpleicons.org/letsencrypt/003A70" } // ใช้โลโก้ Let's Encrypt ผู้ออกใบรับรอง SSL/HTTPS หลัก
 ];
 
 const iot_tools: Skill[] = [
-  { name: "PlatformIO / Arduino IDE", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" },
-  { name: "STM32Cube (MX / IDE)", logo: "" },
-  { name: "Keil uVision5", logo: "" }
+  { name: "PlatformIO / Arduino IDE", logo: "https://cdn.simpleicons.org/arduino/00979D" },
+  { name: "STM32Cube (MX / IDE)", logo: "https://cdn.simpleicons.org/stmicroelectronics/032347" }, // โลโก้ STMicroelectronics ค่ายแม่
+  { name: "Keil uVision5", logo: "https://cdn.simpleicons.org/arm/0091BA" } // โลโก้ ARM บริษัทแม่ของ Keil
 ];
 
 // ── ข้อมูลภาพรวมหมวดหมู่อื่นๆ ──
@@ -54,14 +54,14 @@ const other_tech_categories: TechCategory[] = [
       { name: "FastAPI / Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
       { name: "Node.js (Express)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
       { name: "PostgreSQL & SQLite (Turso)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-      { name: "Drizzle ORM & Supabase", logo: "https://raw.githubusercontent.com/supabase/supabase/master/web/static/supabase-logo-icon.svg" }
+      { name: "Drizzle ORM & Supabase", logo: "https://cdn.simpleicons.org/supabase/3ECF8E" }
     ]
   },
   {
     category: "DevOps & Automation",
     skills: [
       { name: "Docker & Docker Compose", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "n8n Workflow Automation", logo: "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.svg" },
+      { name: "n8n Workflow Automation", logo: "https://cdn.simpleicons.org/n8n/FF6C37" },
       { name: "GitHub Actions (CI/CD)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
       { name: "Cloudflare & Nginx Proxy", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg" },
       { name: "Linux Server (Ubuntu)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" }
@@ -72,11 +72,23 @@ const other_tech_categories: TechCategory[] = [
 function TechIcon({ name, src }: { name: string; src: string }) {
   const [error, setError] = useState(false);
 
+  // ตรรกะคุมฟิลเตอร์เปลี่ยนสีให้กับม้วนเส้นพลาสติก
+  const getFilamentStyle = (techName: string) => {
+    const lower = techName.toLowerCase();
+    if (lower.includes("pla")) return { filter: "hue-rotate(330deg) saturate(1.8)" }; // สีส้มแดงสะดุดตา
+    if (lower.includes("petg")) return { filter: "hue-rotate(120deg) saturate(1.6)" }; // สีเขียวโปร่งแสง
+    if (lower.includes("tpu")) return { filter: "hue-rotate(45deg) saturate(2)" }; // สีเหลืองสดใส
+    if (lower.includes("pc")) return { filter: "grayscale(100%) brightness(1.4)" }; // สีขาวใสเกรดวิศวกรรม
+    return undefined;
+  };
+
   const getEmoji = (tech: string) => {
     const lower = tech.toLowerCase();
     if (lower.includes("mqtt") || lower.includes("websocket") || lower.includes("esp-now") || lower.includes("thread") || lower.includes("matter")) return "📡";
     if (lower.includes("speech") || lower.includes("whisper")) return "🎙️";
-    if (lower.includes("3d") || lower.includes("fusion") || lower.includes("printing") || lower.includes("slicer") || lower.includes("keil") || lower.includes("uvision")) return "🛠️";
+    if (lower.includes("orcaslicer")) return "🐋"; // ใช้ปลาวาฬเพชฌฆาตสำหรับ OrcaSlicer
+    if (lower.includes("fusion") || lower.includes("autodesk") || lower.includes("cad")) return "📐"; // ไม้บรรทัดสามเหลี่ยมสำหรับออกแบบ CAD
+    if (lower.includes("3d") || lower.includes("printing") || lower.includes("slicer") || lower.includes("keil") || lower.includes("uvision")) return "🛠️";
     if (lower.includes("supabase") || lower.includes("drizzle")) return "⚡";
     if (lower.includes("n8n")) return "🤖";
     if (lower.includes("esp32") || lower.includes("stm32") || lower.includes("ch32") || lower.includes("py32")) return "🔌";
@@ -95,6 +107,8 @@ function TechIcon({ name, src }: { name: string; src: string }) {
     return "⚙️";
   };
 
+  const filamentStyle = getFilamentStyle(name);
+
   if (error || !src) {
     return (
       <span 
@@ -104,7 +118,8 @@ function TechIcon({ name, src }: { name: string; src: string }) {
           alignItems: "center", 
           justifyContent: "center", 
           width: "20px", 
-          height: "20px" 
+          height: "20px",
+          ...filamentStyle // ใส่สีสันให้กับม้วนเส้นพลาสติก
         }}
       >
         {getEmoji(name)}
@@ -143,16 +158,16 @@ export default function TechStack({ category }: { category?: string }) {
   } else if (category === "3d-printing") {
     // ── ฝั่ง 3D Printing: จัดกลุ่มเป็น 3 การ์ดหลัก (Filament, Tool, Production Work) ──
     const print_filaments = [
-      { name: "PLA / PLA+ (งานโครงสร้างทั่วไป)", logo: "" },
+      { name: "PLA / PLA+ (งานโครงสร้างทั่วไป)", logo: "" }, // ส่งว่างเพื่อให้แสดงผลม้วนเส้นด้ายเปลี่ยนสี
       { name: "PETG (เหนียว ทนความร้อน/สารเคมี)", logo: "" },
       { name: "TPU (พลาสติกยาง ยืดหยุ่นทนแรงบิด)", logo: "" },
       { name: "PC (ทนความร้อนสูงและแรงกระแทกขั้นสุด)", logo: "" }
     ];
     
     const print_tools = [
-      { name: "Autodesk Fusion 360 (CAD)", logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/fusion-360/fusion-360.png" },
+      { name: "Autodesk Fusion 360 (CAD)", logo: "" }, // Fallback to 📐 (ไม้บรรทัดสามเหลี่ยมเขียนแบบ)
       { name: "Blender (3D Case Modeling)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" },
-      { name: "OrcaSlicer (G-code Generator)", logo: "" }
+      { name: "OrcaSlicer (G-code Generator)", logo: "" } // Fallback to 🐋 (ปลาวาฬเพชฌฆาต)
     ];
 
     const print_works = [
@@ -171,11 +186,11 @@ export default function TechStack({ category }: { category?: string }) {
   } else {
     // ── หน้าแรก (ภาพรวมทั้งหมด): ดึงตัวแทนทักษะเด่นๆ ──
     const iot_overview_skills = [
-      { name: "ESP32 & STM32 MCUs", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+      { name: "ESP32 & STM32 MCUs", logo: "https://cdn.simpleicons.org/espressif/E02E2B" },
       { name: "Raspberry Pi & Orange Pi", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" },
-      { name: "PlatformIO / Keil uVision5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" },
-      { name: "MQTT & ESP-NOW Protocols", logo: "https://raw.githubusercontent.com/mqtt/mqtt.org/master/site/images/mqtt-logo.svg" },
-      { name: "Thread / Matter & BLE", logo: "" }
+      { name: "PlatformIO / Keil uVision5", logo: "https://cdn.simpleicons.org/arduino/00979D" },
+      { name: "MQTT & ESP-NOW Protocols", logo: "https://cdn.simpleicons.org/mqtt/660066" },
+      { name: "Thread / Matter & BLE", logo: "https://cdn.simpleicons.org/matter/E60028" }
     ];
 
     display_stacks = [
