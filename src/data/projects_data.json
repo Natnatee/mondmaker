@@ -152,7 +152,7 @@
   {
     "id": "ar-basketball",
     "title": "WebAR Basketball Game",
-    "category": "smart-iot",
+    "category": "web-automation",
     "tags": [
       "WebAR",
       "Three.js",
@@ -174,15 +174,14 @@
     },
     "demoUrl": "https://actmedia-ar-gamma.vercel.app/ar/basketball",
     "techSpecs": {
-      "embedded": [
-        "WebXR Device API",
-        "SLAM (Simultaneous Localization and Mapping)",
-        "Device Orientation Sensors"
-      ],
+      "embedded": [],
       "web": [
         "Next.js (React / TypeScript)",
         "Three.js (WebGL 3D Rendering)",
         "8th Wall WebAR Engine",
+        "WebXR Device API",
+        "SLAM (Simultaneous Localization and Mapping)",
+        "Device Orientation Sensors",
         "Tailwind CSS (UI)"
       ],
       "design3D": [
@@ -203,6 +202,54 @@
       "4 Dynamic Game Modes: ประกอบด้วยโหมด Normal (ฝึกชู้ต), Fade (แป้นล่องหน), Multi-Hoop (หลายแป้นและเคลื่อนไหวท้าทาย), และ Wind (มีกระแสลมพัดเบี่ยงทิศทางลูกบอล)",
       "Interactive Calibration Tool: เครื่องมือสอบเทียบระยะและขนาด (Hoop Alignment & Scaling) เพื่อปรับขนาดบอร์ด แป้น และลูกบอลให้เข้ากับสภาพแวดล้อมจริง",
       "Real-time Score & Combo System: ระบบนับแต้มและคูณคะแนนตามคอมโบการชู้ตลงต่อเนื่อง รวมถึงแป้นสีทองพิเศษ (Golden Hoop) ที่ให้แต้มเพิ่ม 2 เท่า"
+    ]
+  },
+  {
+    "id": "esp32-eye-robot",
+    "title": "ESP32-C3 Expressive Eye Robot",
+    "category": "smart-iot",
+    "tags": [
+      "ESP32-C3",
+      "OLED SH1106",
+      "U8g2",
+      "Interactive Robot"
+    ],
+    "businessOutcome": "อุปกรณ์ตั้งโต๊ะขนาดจิ๋วช่วยสร้างสีสันในพื้นที่ทำงาน (Interactive Workspace Toy) ด้วยตัวเลือกฟังก์ชันอำนวยความสะดวกและมินิเกม ในต้นทุนฮาร์ดแวร์ต่ำกว่า 200 บาท",
+    "summary": "หุ่นยนต์จิ๋วตั้งโต๊ะใช้ชิป ESP32-C3 และจอ OLED 1.3 นิ้ว จำลองดวงตาเคลื่อนไหวแสดงอารมณ์ 5 รูปแบบ มีระบบซิงค์เวลานาฬิกาผ่าน Wi-Fi (NTP) และมินิเกม Chrome Dino ในตัว",
+    "media": {
+      "thumbnail": "/projects/esp32-eye-robot/thumbnail/t1.mp4",
+      "gallery": [],
+      "reviewImages": [],
+      "videoUrl": "https://www.youtube.com/shorts/rDX7j95Ayng"
+    },
+    "demoUrl": "https://www.youtube.com/shorts/rDX7j95Ayng",
+    "techSpecs": {
+      "embedded": [
+        "ESP32-C3 Super Mini (RISC-V 160MHz)",
+        "1.3\" OLED Display (SH1106, I2C 128x64)",
+        "TTP223 Touch Key Sensor / Button (GPIO 10)",
+        "3.7V 250mAh LiPo Battery & Charge Controller"
+      ],
+      "web": [
+        "NTP Time Synchronization (pool.ntp.org)",
+        "Wi-Fi Connectivity (STA Mode)"
+      ],
+      "design3D": [
+        "3D Printed Case Design"
+      ],
+      "automation": [
+        "Expressive Eye Animation Engine (U8g2 Graphics)",
+        "Time-Based Emotion State Machine (Sleepy/Hungry/Active)",
+        "Chrome Dino Game Algorithm",
+        "Single-Button Multi-action Interpreter (Short/Long Press)"
+      ]
+    },
+    "features": [
+      "Dynamic Eye Animations: จำลองลูกตาอนิเมชั่นอารมณ์ 5 แบบ (Normal, Happy, Angry, Crazy, Sleepy) แสดงผลบนจอ OLED 1.3\" คมชัดผ่านไลบรารี U8g2",
+      "Scheduled Emotion Cycles: อารมณ์ดวงตาปรับเปลี่ยนตามชั่วโมงของวันอัตโนมัติ (เช่น แสดงอาการง่วงนอนนอนหลับช่วงดึก หรือมีท่าทางหิวข้าวตามมื้ออาหาร)",
+      "WiFi NTP Clock Mode: โหมดนาฬิกาดิจิทัลตัวเลขขนาดใหญ่ เชื่อมต่อ Wi-Fi ซิงค์เวลาโลกอัตโนมัติ พร้อมระบบข้ามเพื่อใช้งานออฟไลน์หากไม่พบสัญญาณใน 10 วินาที",
+      "Playable Offline Dino Game: มินิเกมกระโดดหลบกระบองเพชรเล่นแก้เบื่อได้ทุกที่โดยไม่ต้องต่อเน็ต พร้อมระบบเก็บประวัติคะแนนสูงสุด (High Score)",
+      "Single-Button Interface: ควบคุมสั่งงานง่ายด้วยปุ่มเดียว แยกการกดสั้น (กระโดด/เปลี่ยนอารมณ์ชั่วคราว) และกดแช่ 1 วินาที (สลับโหมดหลัก)"
     ]
   }
 ]

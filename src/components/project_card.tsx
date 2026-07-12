@@ -13,6 +13,7 @@ interface ProjectData {
     thumbnail: string;
     gallery: string[];
     reviewImages?: string[];
+    videoUrl?: string;
   };
   demoUrl?: string;
   techSpecs: {
@@ -23,6 +24,8 @@ interface ProjectData {
   };
   features: string[];
 }
+
+
 
 function get_tag_class(tag: string): string {
   const tag_lower = tag.toLowerCase();
@@ -205,6 +208,8 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
                     </ul>
                   </div>
                 )}
+
+
 
                 {project.media.gallery && project.media.gallery.length > 0 && (
                   <div className="modal-section">
