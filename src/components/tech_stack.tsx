@@ -26,7 +26,7 @@ const iot_protocols: Skill[] = [
   { name: "MQTT & WebSockets", logo: "https://cdn.simpleicons.org/mqtt/660066" },
   { name: "ESP-NOW", logo: "https://cdn.simpleicons.org/espressif/E02E2B" }, // ใช้โลโก้ Espressif ผู้คิดค้นโปรโตคอลนี้
   { name: "Bluetooth Low Energy (BLE)", logo: "https://cdn.simpleicons.org/bluetooth/0082FC" },
-  { name: "Thread / Matter", logo: "https://cdn.simpleicons.org/matter/E60028" },
+  { name: "Thread / Matter", logo: "" }, // Fallback to 📡
   { name: "HTTPS", logo: "https://cdn.simpleicons.org/letsencrypt/003A70" } // ใช้โลโก้ Let's Encrypt ผู้ออกใบรับรอง SSL/HTTPS หลัก
 ];
 
@@ -190,7 +190,7 @@ export default function TechStack({ category }: { category?: string }) {
       { name: "Raspberry Pi & Orange Pi", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" },
       { name: "PlatformIO / Keil uVision5", logo: "https://cdn.simpleicons.org/arduino/00979D" },
       { name: "MQTT & ESP-NOW Protocols", logo: "https://cdn.simpleicons.org/mqtt/660066" },
-      { name: "Thread / Matter & BLE", logo: "https://cdn.simpleicons.org/matter/E60028" }
+      { name: "Thread / Matter & BLE", logo: "" } // Fallback to 📡 / 🔵
     ];
 
     display_stacks = [
