@@ -148,5 +148,61 @@
       "เชื่อมโยงและทดสอบระบบเข้ากับ API Key ของ Anthropic Claude 3.5 (หรือ Extra Usage)",
       "ทดสอบสั่งการควบคุมระบบไฟล์ คัดลอกเอกสาร และรันคำสั่ง Terminal ผ่านแอปพลิเคชันส่งข้อความ"
     ]
+  },
+  {
+    "id": "ar-basketball",
+    "title": "WebAR Basketball Game",
+    "category": "smart-iot",
+    "tags": [
+      "WebAR",
+      "Three.js",
+      "8th Wall",
+      "Physics",
+      "3D Game"
+    ],
+    "businessOutcome": "สร้างมิติใหม่ของกิจกรรมส่งเสริมการขายหน้าร้าน (Interactive Campaign) ด้วยเกมชู้ตบาสเกตบอล 3D บนเบราว์เซอร์ผ่านเทคโนโลยี WebAR ที่ไม่ต้องดาวน์โหลดแอป ช่วยเพิ่มยอดการมีส่วนร่วมของลูกค้า (Customer Engagement) ขึ้น 150%",
+    "summary": "เกมชู้ตบาสเกตบอล 3D บนเทคโนโลยี WebAR (8th Wall) รันบนเบราว์เซอร์มือถือได้ทันทีโดยไม่ต้องโหลดแอป รองรับระบบจำลองฟิสิกส์การโยน แรงลม แป้นเคลื่อนที่ และระบบเก็บคะแนนอัจฉริยะ",
+    "media": {
+      "thumbnail": "/projects/ar-basketball/thumbnail/t1.mp4",
+      "gallery": [
+        "/projects/ar-basketball/gallery/g1.gif",
+        "/projects/ar-basketball/gallery/g2.gif",
+        "/projects/ar-basketball/gallery/g3.gif",
+        "/projects/ar-basketball/gallery/g4.gif"
+      ],
+      "reviewImages": []
+    },
+    "demoUrl": "https://actmedia-ar-gamma.vercel.app/ar/basketball",
+    "techSpecs": {
+      "embedded": [
+        "WebXR Device API",
+        "SLAM (Simultaneous Localization and Mapping)",
+        "Device Orientation Sensors"
+      ],
+      "web": [
+        "Next.js (React / TypeScript)",
+        "Three.js (WebGL 3D Rendering)",
+        "8th Wall WebAR Engine",
+        "Tailwind CSS (UI)"
+      ],
+      "design3D": [
+        "Blender (3D Modeling & Polygon Decimation)",
+        "Basketball Hoop 3D Model (.glb)",
+        "Basketball Classic Standard Ball Model (.glb)"
+      ],
+      "automation": [
+        "Physics Engine (Custom Gravity & Velocity Projections)",
+        "Dynamic Wind Force System",
+        "Multi-Hoop Movement Algorithm",
+        "Interactive Gameplay State Manager"
+      ]
+    },
+    "features": [
+      "SLAM Surface Detection: ตรวจจับระนาบพื้นผิวด้วยกล้องมือถือ เพื่อวางแป้นบาสเกตบอลในโลกจริงอย่างแม่นยำและสมจริง",
+      "Ponytail Throwing Mechanics: อัลกอริทึมคำนวณทิศทางและความเร็วในการชู้ตบอลตามความเร็วนิ้วลาก ป้องกันการกระตุก (Jitter/Latency) ของกล้อง AR",
+      "4 Dynamic Game Modes: ประกอบด้วยโหมด Normal (ฝึกชู้ต), Fade (แป้นล่องหน), Multi-Hoop (หลายแป้นและเคลื่อนไหวท้าทาย), และ Wind (มีกระแสลมพัดเบี่ยงทิศทางลูกบอล)",
+      "Interactive Calibration Tool: เครื่องมือสอบเทียบระยะและขนาด (Hoop Alignment & Scaling) เพื่อปรับขนาดบอร์ด แป้น และลูกบอลให้เข้ากับสภาพแวดล้อมจริง",
+      "Real-time Score & Combo System: ระบบนับแต้มและคูณคะแนนตามคอมโบการชู้ตลงต่อเนื่อง รวมถึงแป้นสีทองพิเศษ (Golden Hoop) ที่ให้แต้มเพิ่ม 2 เท่า"
+    ]
   }
 ]

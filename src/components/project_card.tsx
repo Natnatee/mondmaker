@@ -71,11 +71,52 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
         <div className="project-card-front">
           <div className="project-card-image">
             {project.media.thumbnail ? (
-              <img
-                src={project.media.thumbnail}
-                alt={project.title}
-                loading="lazy"
-              />
+              project.media.thumbnail.toLowerCase().endsWith(".mp4") ||
+              project.media.thumbnail.toLowerCase().endsWith(".webm") ||
+              project.media.thumbnail.toLowerCase().endsWith(".ogg") ? (
+                <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden", background: "#050505" }}>
+                  {/* Blurred Background Video to fill the container */}
+                  <video
+                    src={project.media.thumbnail}
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      filter: "blur(15px) brightness(0.5)",
+                      transform: "scale(1.1)",
+                      opacity: 0.6
+                    }}
+                  />
+                  {/* Clear Foreground Video showing the actual video aspect ratio */}
+                  <video
+                    src={project.media.thumbnail}
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                      zIndex: 1
+                    }}
+                  />
+                </div>
+              ) : (
+                <img
+                  src={project.media.thumbnail}
+                  alt={project.title}
+                  loading="lazy"
+                />
+              )
             ) : (
               <div
                 style={{
