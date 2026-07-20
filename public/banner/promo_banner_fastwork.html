@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>Mond Maker - Fastwork Banner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #111;
+      font-family: 'Inter', 'Outfit', sans-serif;
+    }
+
+    .banner {
+      width: 1200px;
+      height: 628px;
+      position: relative;
+      overflow: hidden;
+      background: url('/image-main/03911fc5-d2fa-46c4-90aa-efc73567c37a.png') center/cover no-repeat;
+    }
+
+    /* ── Dark overlay สำหรับให้ข้อความอ่านง่ายขึ้น ── */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.3) 40%,
+        rgba(0, 0, 0, 0.15) 70%,
+        rgba(0, 0, 0, 0.25) 100%
+      );
+    }
+
+    /* ── Content Layout ── */
+    .content {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 70px;
+    }
+
+    /* ── Top Label ── */
+    .label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #00c6ff;
+      margin-bottom: 16px;
+      text-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+    }
+
+    /* ── Main Title ── */
+    .title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 82px;
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 14px;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    }
+    .title .mond {
+      background: linear-gradient(135deg, #00c6ff 0%, #00b4d8 50%, #48cae4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 2px 10px rgba(0, 198, 255, 0.3));
+    }
+    .title .maker {
+      color: #ffffff;
+    }
+
+    /* ── Subtitle ── */
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 34px;
+      letter-spacing: 0.3px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ── Skill Tags ── */
+    .tags {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .tag-iot {
+      background: rgba(0, 198, 255, 0.15);
+      color: #67e8f9;
+      border: 1px solid rgba(0, 198, 255, 0.3);
+    }
+    .tag-web {
+      background: rgba(34, 197, 94, 0.15);
+      color: #86efac;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    .tag-3d {
+      background: rgba(255, 107, 53, 0.15);
+      color: #fdba74;
+      border: 1px solid rgba(255, 107, 53, 0.3);
+    }
+    .tag-ai {
+      background: rgba(124, 58, 237, 0.15);
+      color: #c4b5fd;
+      border: 1px solid rgba(124, 58, 237, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="label">// Creative Tech Service</div>
+
+      <h1 class="title">
+        <span class="mond">Mond</span> <span class="maker">Maker</span>
+      </h1>
+
+      <p class="subtitle">
+        รับออกแบบ &amp; พัฒนาระบบ IoT · เว็บแอปพลิเคชัน · งานพิมพ์ 3D · ระบบ AI
+      </p>
+
+      <!-- Skill Tags -->
+      <div class="tags">
+        <span class="tag tag-iot">🔌 Smart IoT &amp; Embedded</span>
+        <span class="tag tag-web">🌐 Full-Stack Web Dev</span>
+        <span class="tag tag-3d">🖨️ 3D Printing</span>
+        <span class="tag tag-ai">🧠 AI &amp; Computer Vision</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
