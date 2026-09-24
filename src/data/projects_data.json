@@ -349,5 +349,221 @@
       "Smooth Interactive SVG Chart: กราฟแนวโน้มแบบเส้นโค้ง Bezier แสดงผลตามช่วงเวลาตั้งแต่ 00:00 น. ของวัน พร้อมระบบ Interactive Crosshair & Tooltip",
       "Daily Min/Max/Avg Analytics: สรุปค่าอุณหภูมิสูงสุด ต่ำสุด และค่าเฉลี่ยประจำวัน เพื่อประเมินความพร้อมก่อนพิมพ์ชิ้นงาน 3D"
     ]
+  },
+  {
+    "id": "bite-club",
+    "title": "BITE CLUB — Food Ordering Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Food Ordering", "Next.js", "Responsive"],
+    "businessOutcome": "เทมเพลตเดโมร้านอาหารและสั่งอาหาร แสดงประสบการณ์เลือกเมนู ปรับตัวเลือก จัดคอมโบ และตะกร้าจำลอง",
+    "summary": "เว็บไซต์ร้านอาหาร BITE CLUB โทนครีม–แดง–เหลือง พร้อมเมนูค้นหาและกรองหมวด เลือกท็อปปิงและจัดคอมโบ โดยไม่มีการส่งออร์เดอร์หรือชำระเงินจริง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://store-food-beta.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4"],
+      "design3D": [],
+      "automation": ["Responsive UI", "Interactive Mock Cart", "Playwright"]
+    },
+    "features": [
+      "ค้นหาและกรองเมนูอาหารตามหมวดหมู่",
+      "ปรับขนาดและส่วนเพิ่มของเมนู พร้อมคำนวณราคา",
+      "จัดคอมโบและจัดการตะกร้าสินค้าจำลอง",
+      "ทดลองขั้นตอนเช็กเอาต์ โดยไม่มีการส่งข้อมูลหรือชำระเงินจริง"
+    ]
+  },
+  {
+    "id": "nova-ecommerce-dashboard",
+    "title": "NOVA — Ecommerce Analytics Dashboard",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Dashboard", "Analytics", "Next.js"],
+    "businessOutcome": "เทมเพลตแดชบอร์ดวิเคราะห์ร้านค้าออนไลน์ด้วยข้อมูลสมมติ สำหรับสาธิตการติดตามยอดขาย ออเดอร์ และสินค้า",
+    "summary": "แดชบอร์ด NOVA แสดง KPI และกราฟแนวโน้ม พร้อมหน้ารายการออเดอร์ สินค้า และลูกค้าจำลอง ค้นหา กรอง ดาวน์โหลด CSV และเปิดดูรายละเอียดได้",
+    "media": {
+      "thumbnail": "/projects/nova-ecommerce-dashboard/thumbnail/demo.png",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://ecommerce-analytics-tau.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "SVG Charts"],
+      "design3D": [],
+      "automation": ["Mock Sales Analytics", "Order Search & Filters", "CSV Export", "Playwright"]
+    },
+    "features": [
+      "สรุปยอดขาย จำนวนออเดอร์ มูลค่าเฉลี่ย และจำนวนสินค้าที่ขายจากข้อมูลเดโม",
+      "เปลี่ยนช่วงเวลาสำหรับตัวเลขและกราฟแนวโน้มตัวอย่าง",
+      "ค้นหา กรองสถานะ และแบ่งหน้ารายการออเดอร์",
+      "เปิดรายละเอียดออเดอร์และดาวน์โหลดข้อมูลเป็น CSV"
+    ]
+  },
+  {
+    "id": "roam",
+    "title": "ROAM — Thailand Travel Planner Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Travel", "Trip Planner", "Next.js"],
+    "businessOutcome": "เทมเพลตเดโมวางแผนทริปในประเทศไทย สาธิตการค้นหา เปรียบเทียบ และจองประสบการณ์ท่องเที่ยวด้วยข้อมูลสมมติ",
+    "summary": "เว็บวางแผนท่องเที่ยวไทยที่ค้นหาและกรอง 8 เส้นทางได้ ดูกำหนดการรายวัน จับคู่ทริปตามวันว่างและงบประมาณ พร้อมสร้าง boarding pass จำลองโดยไม่มีการจองจริง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://roam-seven-tan.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4"],
+      "design3D": [],
+      "automation": ["Interactive Trip Matcher", "Responsive Booking Flow", "Playwright"]
+    },
+    "features": [
+      "ค้นหาและกรองทริปตามปลายทาง งบ จำนวนวัน และสไตล์การเดินทาง",
+      "ดูแผนรายวัน สิ่งที่รวม/ไม่รวม และรายละเอียดเส้นทาง",
+      "จับคู่ทริปตามจำนวนวันที่มี งบต่อคน และสไตล์ที่เลือก",
+      "คำนวณราคาและสร้างบัตร Boarding Pass จำลองโดยไม่มีการชำระเงินจริง"
+    ]
+  },
+  {
+    "id": "shift",
+    "title": "SHIFT — Used Car Marketplace Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Automotive", "Marketplace", "Next.js"],
+    "businessOutcome": "เทมเพลตเดโมแคตตาล็อกรถมือสอง สาธิตการค้นหา เปรียบเทียบรถ และประเมินค่างวดจากข้อมูลตัวอย่าง",
+    "summary": "เว็บแสดงรถมือสอง 9 คันพร้อมตัวกรองแบรนด์ งบ ปี เลขไมล์ และรูปแบบตัวถัง เปิดดูรายละเอียด เปรียบเทียบรถ และคำนวณค่างวดจำลองได้",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://shift-lac-rho.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4"],
+      "design3D": [],
+      "automation": ["Vehicle Search & Filters", "Car Comparison", "Finance Calculator", "Playwright"]
+    },
+    "features": [
+      "ค้นหาและกรองรถตามแบรนด์ ราคา ปี เลขไมล์ และประเภทรถ",
+      "ดูข้อมูลรถจำลองและเปรียบเทียบรถ 2–3 คัน",
+      "คำนวณตัวอย่างค่างวดแบบ Flat rate พร้อมสรุปดอกเบี้ย",
+      "จับคู่รถจากงบประมาณและไลฟ์สไตล์ พร้อมแบบฟอร์มนัดทดลองขับจำลอง"
+    ]
+  },
+  {
+    "id": "respawn",
+    "title": "RESPAWN — Game Top-up Store Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Gaming", "E-commerce", "Next.js"],
+    "businessOutcome": "เทมเพลตร้านเติมเกมจำลอง สาธิตแคตตาล็อกเกม การเลือกแพ็กเกจ และประสบการณ์เช็กเอาต์โดยไม่มีการขายหรือเติมเครดิตจริง",
+    "summary": "ร้านเติมเกมคอนเซปต์ RESPAWN โทนดำ–เขียว Acid พร้อมค้นหาเกม เลือกแพ็กเกจ บันทึกรายการโปรด สะสม XP สำหรับการสำรวจ และจบออเดอร์จำลอง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://respawn123.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4"],
+      "design3D": [],
+      "automation": ["Interactive Game Catalog", "Mock Checkout", "Responsive UI", "Playwright"]
+    },
+    "features": [
+      "ค้นหา กรองเกม และบันทึกรายการโปรด",
+      "เลือกแพ็กเกจและตรวจสรุปออเดอร์จำลองก่อนยืนยัน",
+      "ระบบ XP แสดงความคืบหน้าการสำรวจเว็บไซต์ ไม่มีมูลค่าแลกรางวัล",
+      "ไม่รับข้อมูลผู้เล่น ไม่รับชำระเงิน และไม่มีการเติมเกมจริง"
+    ]
+  },
+  {
+    "id": "serein-hotel",
+    "title": "Serein Koh Samui — Hotel Website Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Hotel", "Hospitality", "Next.js"],
+    "businessOutcome": "เทมเพลตโรงแรมสมมติ สาธิตการนำเสนอห้องพัก สิ่งอำนวยความสะดวก และขั้นตอนเลือกวันเข้าพัก",
+    "summary": "เว็บไซต์โรงแรมแนวรีสอร์ตบนเกาะสมุย มีห้องพักสามแบบ รายละเอียดบริการ และแบบฟอร์มวางแผนวันพักพร้อมจำนวนผู้เข้าพัก เป็นเดโมที่ไม่มีการจองหรือชำระเงินจริง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://hotel-bice-sigma.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Responsive Web Design"],
+      "design3D": [],
+      "automation": ["Stay Search UI", "Room Collection", "Vercel Deployment"]
+    },
+    "features": [
+      "หน้า Landing Page เน้นภาพบรรยากาศและการเล่าเรื่องแบบรีสอร์ต",
+      "แสดงห้องพักสามประเภท พร้อมขนาด จำนวนผู้เข้าพัก และราคาตัวอย่าง",
+      "เลือกวันเช็กอิน เช็กเอาต์ และจำนวนผู้เข้าพักเพื่อสำรวจห้องพัก",
+      "แสดงบริการและแพ็กเกจตัวอย่าง โดยไม่มีการรับจองหรือชำระเงินจริง"
+    ]
+  },
+  {
+    "id": "aurel-clinic",
+    "title": "AUREL — Premium Clinic Website Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Clinic", "Wellness", "Next.js"],
+    "businessOutcome": "เทมเพลตคลินิกความงามสมมติ สำหรับสาธิตการนำเสนอบริการและขั้นตอนขอรับคำปรึกษาออนไลน์",
+    "summary": "เว็บไซต์คลินิกโทน Ivory–Olive นำเสนอบริการสามหมวด บทความ และฟอร์มทดลองนัดหมาย ข้อมูล ราคา สถานที่ และผลการรักษาทั้งหมดเป็นตัวอย่าง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://clinic-ten-ochre.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Vanilla CSS"],
+      "design3D": [],
+      "automation": ["Treatment Filters", "Mock Appointment Form", "Responsive UI"]
+    },
+    "features": [
+      "กรองหมวดบริการและเปิดดูรายละเอียดทรีตเมนต์จำลอง",
+      "แสดงแนวคิดคลินิก ประสบการณ์การดูแล และบทความตัวอย่าง",
+      "ทดลองเลือกบริการ วัน และเวลาในแบบฟอร์มนัดหมาย",
+      "ไม่มีการจองจริง ส่งข้อมูลส่วนตัว หรือให้คำแนะนำทางการแพทย์"
+    ]
+  },
+  {
+    "id": "forme-studio",
+    "title": "FORME — Architecture & Interiors Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Architecture", "Interior Design", "Next.js"],
+    "businessOutcome": "เทมเพลตสตูดิโอออกแบบพื้นที่สมมติ สาธิตการนำเสนอผลงานและรับโจทย์เบื้องต้นจากลูกค้า",
+    "summary": "เว็บไซต์สตูดิโอสถาปัตยกรรมและออกแบบภายในสไตล์ Editorial Minimal มีตัวกรองโครงการ รายละเอียดแนวคิดและวัสดุ พร้อมฟอร์มสรุปโจทย์จำลอง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://forme-beige.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4"],
+      "design3D": [],
+      "automation": ["Project Category Filters", "Accessible Detail Dialog", "Mock Project Brief"]
+    },
+    "features": [
+      "กรองผลงานสมมติตามบ้าน คอนโด และพื้นที่เชิงพาณิชย์",
+      "เปิดรายละเอียดโครงการพร้อมแนวคิด พื้นที่ และวัสดุตัวอย่าง",
+      "แนะนำกระบวนการออกแบบและแนวคิดของสตูดิโอ",
+      "ทดลองกรอกประเภทโครงการ ขนาดพื้นที่ และงบประมาณ โดยไม่ส่งข้อมูลจริง"
+    ]
   }
 ]

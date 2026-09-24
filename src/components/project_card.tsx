@@ -28,15 +28,6 @@ interface ProjectData {
 
 
 
-function get_tag_class(tag: string): string {
-  const tag_lower = tag.toLowerCase();
-  if (tag_lower.includes("iot") || tag_lower.includes("embedded")) return "iot";
-  if (tag_lower.includes("web") || tag_lower.includes("next") || tag_lower.includes("pwa"))
-    return "web";
-  if (tag_lower.includes("3d") || tag_lower.includes("printing")) return "printing";
-  if (tag_lower.includes("ai") || tag_lower.includes("automation")) return "automation";
-  return "web";
-}
 
 export default function ProjectCard({ project }: { project: ProjectData }) {
   const [is_modal_open, setIs_modal_open] = useState(false);
@@ -149,6 +140,11 @@ export default function ProjectCard({ project }: { project: ProjectData }) {
 
           <div className="project-card-body">
             <h3 className="project-card-title">{project.title}</h3>
+            {project.tags.some((tag) => tag.toLowerCase() === "demo") && (
+              <div className="project-card-tags" aria-label="Project tags">
+                <span className="tag demo">Demo</span>
+              </div>
+            )}
             <p className="project-card-outcome">{project.businessOutcome}</p>
           </div>
         </div>

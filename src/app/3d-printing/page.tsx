@@ -3,12 +3,12 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ProjectCard from "@/components/project_card";
 import TechStack from "@/components/tech_stack";
-import { get_projects_data } from "@/lib/projects_loader";
+import { get_projects_data, is_demo_project } from "@/lib/projects_loader";
 
 export default function ThreeDPrintingPage() {
   const projects_data = get_projects_data();
   const print_projects = projects_data.filter(
-    (p) => p.category === "3d-printing"
+    (p) => p.category === "3d-printing" && !is_demo_project(p)
   );
 
   return (

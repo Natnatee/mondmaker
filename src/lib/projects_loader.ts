@@ -27,6 +27,10 @@ export interface ProjectData {
 
 const SUPPORTED_EXTENSIONS = [".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".bmp"];
 
+export function is_demo_project(project: ProjectData): boolean {
+  return project.tags.some((tag) => tag.toLowerCase() === "demo");
+}
+
 export function get_projects_data(): ProjectData[] {
   // ทำการ Deep Copy ข้อมูลเพื่อไม่ให้ไปทับตัวต้นแบบที่แคชไว้ใน Node.js
   const projects: ProjectData[] = JSON.parse(JSON.stringify(raw_projects_data));

@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import ProjectCard from "@/components/project_card";
 import HomeHero3D from "@/components/home_hero_3d";
 import TechStack from "@/components/tech_stack";
-import { get_projects_data } from "@/lib/projects_loader";
+import { get_projects_data, is_demo_project } from "@/lib/projects_loader";
 
 function AnimatedText({ text, startDelay }: { text: string; startDelay: number }) {
   let charCount = 0;
@@ -48,7 +48,7 @@ function AnimatedText({ text, startDelay }: { text: string; startDelay: number }
 export default function Home() {
   const projects_data = get_projects_data();
   // กรองแสดงผลเฉพาะโปรเจกต์เด่นที่หน้าแรก (จำกัดสูงสุด 6 การ์ด)
-  const featured_projects = projects_data.filter((p) => p.featured).slice(0, 6);
+  const featured_projects = projects_data.filter((p) => p.featured && !is_demo_project(p)).slice(0, 6);
 
   return (
     <div className="page-wrapper">
@@ -139,6 +139,9 @@ export default function Home() {
               </Link>
               <Link href="/3d-printing" className="btn-view-more">
                 <span>3D Design & Production ➔</span>
+              </Link>
+              <Link href="/demos" className="btn-view-more">
+                <span>ดูเว็บไซต์ Demo ↗</span>
               </Link>
             </div>
           </div>
