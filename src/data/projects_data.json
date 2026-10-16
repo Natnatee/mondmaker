@@ -29,7 +29,7 @@
     "techSpecs": {
       "embedded": [],
       "web": [
-        "Next.js (React / TypeScript)",
+        "Next.js 16",
         "Tailwind CSS 4",
         "Drizzle ORM",
         "Neon PostgreSQL",
@@ -90,13 +90,13 @@
       "automation": [
         "FastAPI Backend Server",
         "Acoustic ML (CNN + Google HeAR Ensemble)",
-        "Line Notification API"
+        "Line Notify Integration"
       ]
     },
     "features": [
       "บันทึกเสียงแบบเรียลไทม์ด้วย ESP32-C3: ใช้ไมค์ INMP441 อัดเสียงผ่าน I2S ลงบน Flash RAM + LittleFS พร้อมกลไกความปลอดภัยลบไฟล์ทิ้งทันทีเมื่อส่งสำเร็จ",
       "WiFi Setup Mode: มีปุ่มกดสลับโหมดเปิด SoftAP + Captive Portal หน้าตาพรีเมียมสำหรับตั้งค่าการเชื่อมต่อ WiFi",
-      "ระบบวิเคราะห์เสียง AI (Acoustic Machine Learning): ใช้โมเดล Ensemble (CNN + Google HeAR + Acoustic ML) ในการวิเคราะห์จำแนกโรค 4 คลาสหลัก ความแม่นยำสูง",
+      "ระบบวิเคราะห์เสียง AI (Acoustic ML): ใช้โมเดล Ensemble (CNN + Google HeAR + Acoustic ML) ในการวิเคราะห์จำแนกโรค 4 คลาสหลัก ความแม่นยำสูง",
       "Line Notification: แจ้งเตือนผู้ปกครองผ่าน Line Notify ทันทีพร้อมลิงก์รายงานผลการวิเคราะห์เมื่อตรวจพบอาการเสี่ยงสูง",
       "Web App Dashboard: แสดงสรุปรายงานผลการวิเคราะห์เปรียบเทียบอาการพร้อม Checklist 4 ข้อเพื่อประเมินระดับความรุนแรง (สีเขียว/เหลือง/แดง)"
     ]
@@ -134,7 +134,7 @@
     "featured": false,
     "tags": ["OpenClaw", "macOS", "AI Agent", "Claude 3.5", "AnyDesk"],
     "businessOutcome": "ติดตั้งและตั้งค่าระบบ AI Agent (OpenClaw) บน MacBook Air ผ่าน AnyDesk ให้พร้อมสั่งงานด้วยโมเดล Claude ครบวงจร ช่วยให้สั่งการเครื่องจากระยะไกลได้อย่างรวดเร็วและปลอดภัย",
-    "summary": "บริการติดตั้งและตั้งค่าระบบ AI Agent อัตโนมัติ (OpenClaw) ผ่านโปรแกรมรีโมต AnyDesk ลงบนเครื่อง MacBook Air ของลูกค้า พร้อมเปิดใช้สิทธิ์ระบบและต่อเข้ากับ API Key ของ Anthropic Claude 3.5",
+    "summary": "บริการติดตั้งและตั้งค่าระบบ AI Agent อัตโนมัติ (OpenClaw) ผ่านโปรแกรมรีโมต AnyDesk ลงบนเครื่อง MacBook Air ของลูกค้า พร้อมเปิดใช้สิทธิ์ระบบและต่อเข้ากับ API ของ Anthropic Claude 3.5",
     "media": {
       "thumbnail": "/projects/openclaw-macbook-setup/thumbnail/t1.png",
       "gallery": [],
@@ -148,7 +148,7 @@
       "automation": ["AnyDesk Remote Support", "macOS System Hooks", "TCC Permission Setup"]
     },
     "features": [
-      "ติดตั้งซอฟต์แวร์ OpenClaw Engine ลงบน macOS ของลูกค้าผ่านโปรแกรมรีโมต AnyDesk",
+      "ติดตั้งซอฟต์แวร์ OpenClaw Engine ลงบน macOS ของลูกค้าผ่านระบบรีโมต AnyDesk",
       "ตั้งค่าการอนุญาตระดับระบบ (macOS TCC Permissions) เพื่อให้ AI สามารถจัดการไฟล์และทำงานอย่างปลอดภัย",
       "เชื่อมโยงและทดสอบระบบเข้ากับ API Key ของ Anthropic Claude 3.5 (หรือ Extra Usage)",
       "ทดสอบสั่งการควบคุมระบบไฟล์ คัดลอกเอกสาร และรันคำสั่ง Terminal ผ่านแอปพลิเคชันส่งข้อความ"
@@ -185,9 +185,9 @@
         "Next.js (React / TypeScript)",
         "Three.js (WebGL 3D Rendering)",
         "8th Wall WebAR Engine",
-        "Device Orientation Sensors",
-        "SLAM (Simultaneous Localization and Mapping)",
         "WebXR Device API",
+        "SLAM (Simultaneous Localization and Mapping)",
+        "Device Orientation Sensors",
         "Tailwind CSS (UI)"
       ],
       "design3D": [
@@ -199,13 +199,13 @@
         "Physics Engine (Custom Gravity & Velocity Projections)",
         "Dynamic Wind Force System",
         "Multi-Hoop Movement Algorithm",
-        "Real-time Scoring & Combo System"
+        "Interactive Gameplay State Manager"
       ]
     },
     "features": [
       "SLAM Surface Detection: ตรวจจับระนาบพื้นผิวด้วยกล้องมือถือ เพื่อวางแป้นบาสเกตบอลในโลกจริงอย่างแม่นยำและสมจริง",
-      "Physics Engine: อัลกอริทึมคำนวณทิศทางและความเร็วในการชู้ตบอลตามความเร็วนิ้วลาก ป้องกันการกระตุก (Jitter/Latency) ของกล้อง AR",
-      "4 Dynamic Game Modes: ประกอบด้วยโหมด Normal (ฝึกชู้ต), Wind (ลมแรง), Moving Hoop (แป้นเคลื่อนที่), และ Combo Challenge",
+      "Ponytail Throwing Mechanics: อัลกอริทึมคำนวณทิศทางและความเร็วในการชู้ตบอลตามความเร็วนิ้วลาก ป้องกันการกระตุก (Jitter/Latency) ของกล้อง AR",
+      "4 Dynamic Game Modes: ประกอบด้วยโหมด Normal (ฝึกชู้ต), Fade (แป้นล่องหน), Multi-Hoop (หลายแป้นและเคลื่อนไหวท้าทาย), และ Wind (มีกระแสลมพัดเบี่ยงทิศทางลูกบอล)",
       "Interactive Calibration Tool: เครื่องมือสอบเทียบระยะและขนาด (Hoop Alignment & Scaling) เพื่อปรับขนาดบอร์ด แป้น และลูกบอลให้เข้ากับสภาพแวดล้อมจริง",
       "Real-time Score & Combo System: ระบบนับแต้มและคูณคะแนนตามคอมโบการชู้ตลงต่อเนื่อง รวมถึงแป้นสีทองพิเศษ (Golden Hoop) ที่ให้แต้มเพิ่ม 2 เท่า"
     ]
@@ -247,7 +247,7 @@
       "High-Flow PLA+ Rapid Material: ขึ้นรูปด้วยเส้นพลาสติกเกรดความเร็วสูง ทนแรงกระแทกได้ดีกว่า PLA ทั่วไป สีส้มสดใสคมชัด",
       "Layer Alignment Precision: ความละเอียดชั้นเลเยอร์เสมอกันตลอดทั้งชิ้นงาน แสดงขีดความสามารถด้านความแม่นยำแกนกลไกของเครื่องพิมพ์",
       "Support Optimization: ออกแบบโครงสร้างรองรับ (Support) แบบต้นไม้ (Tree Support) ที่แกะออกง่าย ไม่ทิ้งคราบรอยและรอยแผลบนผิวโมเดลหลัก",
-      "Dynamic Cooling: ระบบพัดลมระบายความร้อนปรับตามความเร็วและชิ้นส่วน เพื่อควบคุมผิวงานและลดการเสียรูป"
+      "High-Speed Cooling: ใช้ระบบเป่าลมรอบทิศทางเพื่อให้พลาสติกแข็งตัวได้ทันต่อความเร็วการพิมพ์ระดับ 300+ mm/s ป้องกันปัญหางานย้วยหรือเสียทรง"
     ]
   },
   {
@@ -273,9 +273,9 @@
     "techSpecs": {
       "embedded": [
         "ESP32-C3 Super Mini (RISC-V 160MHz)",
-        "OLED Display 1.3 inch (SH1106, I2C 128x64)",
+        "1.3\" OLED Display (SH1106, I2C 128x64)",
         "TTP223 Touch Key Sensor / Button (GPIO 10)",
-        "LiPo Battery 3.7V 250mAh + USB-C Charger"
+        "3.7V 250mAh LiPo Battery & Charge Controller"
       ],
       "web": [
         "NTP Time Synchronization (pool.ntp.org)",
@@ -285,18 +285,18 @@
         "3D Printed Case Design"
       ],
       "automation": [
-        "Expressive Eye Animations (Normal / Happy / Angry / Sleepy / Crazy)",
-        "Chrome Dino Mini-game (Jump & Collision Detection)",
-        "Touch Input Event Handling",
-        "NTP Time Sync & Sleep Scheduling"
+        "Expressive Eye Animation Engine (U8g2 Graphics)",
+        "Time-Based Emotion State Machine (Sleepy/Hungry/Active)",
+        "Chrome Dino Game Algorithm",
+        "Single-Button Multi-action Interpreter (Short/Long Press)"
       ]
     },
     "features": [
-      "Expressive Eye Animations: แสดงดวงตาเคลื่อนไหว 5 อารมณ์ด้วยไลบรารี U8g2",
-      "Touch Interaction: แตะเพื่อเปลี่ยนอารมณ์หรือโหมดการทำงานได้ทันที",
-      "Clock Mode: ซิงค์เวลาจริงผ่าน NTP และแสดงนาฬิกาบนจอ OLED",
-      "Mini-game: เกม Chrome Dino แบบย่อสำหรับเล่นบนอุปกรณ์",
-      "Compact & Portable: ใช้พลังงานจากแบตเตอรี่ LiPo ขนาดเล็ก พกพาง่าย"
+      "Dynamic Eye Animations: จำลองลูกตาอนิเมชั่นอารมณ์ 5 แบบ (Normal, Happy, Angry, Crazy, Sleepy) แสดงผลบนจอ OLED 1.3\" คมชัดผ่านไลบรารี U8g2",
+      "Scheduled Emotion Cycles: อารมณ์ดวงตาปรับเปลี่ยนตามชั่วโมงของวันอัตโนมัติ (เช่น แสดงอาการง่วงนอนนอนหลับช่วงดึก หรือมีท่าทางหิวข้าวตามมื้ออาหาร)",
+      "WiFi NTP Clock Mode: โหมดนาฬิกาดิจิทัลตัวเลขขนาดใหญ่ เชื่อมต่อ Wi-Fi ซิงค์เวลาโลกอัตโนมัติ พร้อมระบบข้ามเพื่อใช้งานออฟไลน์หากไม่พบสัญญาณใน 10 วินาที",
+      "Playable Offline Dino Game: มินิเกมกระโดดหลบกระบองเพชรเล่นแก้เบื่อได้ทุกที่โดยไม่ต้องต่อเน็ต พร้อมระบบเก็บประวัติคะแนนสูงสุด (High Score)",
+      "Single-Button Interface: ควบคุมสั่งงานง่ายด้วยปุ่มเดียว แยกการกดสั้น (กระโดด/เปลี่ยนอารมณ์ชั่วคราว) และกดแช่ 1 วินาที (สลับโหมดหลัก)"
     ]
   },
   {
@@ -343,8 +343,10 @@
     },
     "features": [
       "Real-time Monitoring: ตรวจวัดอุณหภูมิ ความชื้น และสถานะฝนตก ส่งข้อมูลเข้า Cloud API ทุกๆ 5 วินาที",
+      "OLED Local Display: แสดงผลสถิติปัจจุบันบนจอ OLED 0.96 นิ้วที่ตัวเครื่อง ESP32-C3",
       "Auto Reconnect System: ระบบจัดการเชื่อมต่อ Wi-Fi และ HTTP POST อัตโนมัติเมื่อสัญญาณหลุด",
-      "Modern Web Dashboard: แสดงผลข้อมูลสิ่งแวดล้อมแบบ Real-time พร้อมกราฟและตัวบ่งชี้สถานะ",
+      "Modern Web Dashboard: หน้าเว็บแสดงผลแบบ Dark Mode Glassmorphism รองรับการใช้งานทั้งบนมือถือและเดสก์ท็อป",
+      "Smooth Interactive SVG Chart: กราฟแนวโน้มแบบเส้นโค้ง Bezier แสดงผลตามช่วงเวลาตั้งแต่ 00:00 น. ของวัน พร้อมระบบ Interactive Crosshair & Tooltip",
       "Daily Min/Max/Avg Analytics: สรุปค่าอุณหภูมิสูงสุด ต่ำสุด และค่าเฉลี่ยประจำวัน เพื่อประเมินความพร้อมก่อนพิมพ์ชิ้นงาน 3D"
     ]
   },
