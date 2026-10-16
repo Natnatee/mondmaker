@@ -565,5 +565,167 @@
       "แนะนำกระบวนการออกแบบและแนวคิดของสตูดิโอ",
       "ทดลองกรอกประเภทโครงการ ขนาดพื้นที่ และงบประมาณ โดยไม่ส่งข้อมูลจริง"
     ]
+  },
+  {
+    "id": "still",
+    "title": "STILL — Lifestyle Store Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "E-commerce", "Lifestyle", "Next.js"],
+    "businessOutcome": "เทมเพลตร้านสินค้าไลฟ์สไตล์สมมติ สาธิตการเลือกสินค้าและจัดการตะกร้าจนถึงเช็กเอาต์ โดยไม่มีการสั่งซื้อจริง",
+    "summary": "ร้าน STILL สไตล์มินิมอลพร้อมสินค้าตัวอย่าง 8 รายการ ค้นหา กรองหมวด เรียงราคา เลือกสีและขนาด พร้อมตะกร้าที่คำนวณยอดสินค้าและค่าจัดส่งจำลอง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://still-smoky-six.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Vanilla CSS", "Lucide React"],
+      "design3D": [],
+      "automation": ["Product Search & Filters", "Product Variant Selection", "Mock Cart & Shipping Calculation"]
+    },
+    "features": [
+      "ค้นหาและกรองสินค้า 4 หมวด พร้อมเรียงราคาต่ำไปสูงหรือสูงไปต่ำ",
+      "เปิดรายละเอียดสินค้า เลือกสี ขนาด และจำนวนก่อนเพิ่มลงตะกร้า",
+      "ปรับจำนวน ลบสินค้า และคำนวณค่าจัดส่งตามยอดสั่งซื้อจำลอง",
+      "ทดลองเช็กเอาต์โดยไม่มีการสั่งซื้อหรือชำระเงินจริง"
+    ]
+  },
+  {
+    "id": "axis",
+    "title": "AXIS — Industrial Solutions Website Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Industrial", "Engineering", "Next.js"],
+    "businessOutcome": "เทมเพลตเว็บไซต์บริษัทวิศวกรรมสมมติ สาธิตการนำเสนอบริการ กรณีศึกษา และขั้นตอนรับโจทย์โครงการเบื้องต้น",
+    "summary": "เว็บไซต์ AXIS INDUSTRIAL SOLUTIONS โทนน้ำเงินอุตสาหกรรม มีตัวกรองบริการ รายละเอียดโครงการตัวอย่าง กระบวนการทำงาน และฟอร์มขอคำปรึกษาที่ตรวจข้อมูลในเบราว์เซอร์โดยไม่ส่งจริง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://axis-eight-mu.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Vanilla CSS", "Tailwind CSS 4", "Lucide React"],
+      "design3D": [],
+      "automation": ["Service Category Filters", "Project Detail Dialog", "Client-side Form Validation"]
+    },
+    "features": [
+      "กรองบริการด้านระบบอัตโนมัติ วิศวกรรม และบำรุงรักษา",
+      "เปิดกรณีศึกษาสมมติพร้อมขอบเขตงานและผลลัพธ์ตัวอย่าง",
+      "นำเสนอกระบวนการทำงานและคำถามที่พบบ่อย",
+      "ตรวจช่องบังคับ อีเมล และการยืนยันในฟอร์มขอคำปรึกษา โดยไม่ส่งหรือบันทึกข้อมูล"
+    ]
+  },
+  {
+    "id": "habitat",
+    "title": "HABITAT — Real Estate Discovery Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Real Estate", "Property Catalog", "Next.js"],
+    "businessOutcome": "เทมเพลตค้นหาที่อยู่อาศัยสมมติ สาธิตการคัดกรอง บันทึกรายการที่สนใจ และเปรียบเทียบอสังหาริมทรัพย์ก่อนทดลองนัดชม",
+    "summary": "เว็บไซต์ HABITAT โทนอบอุ่นพร้อมบ้าน คอนโด และทาวน์โฮมตัวอย่าง 6 รายการ ค้นหาตามทำเล กรองงบประมาณ เรียงรายการ ดูแกลเลอรี และเปรียบเทียบได้สูงสุด 3 รายการ โดยไม่มีการซื้อขายจริง",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://habitat-lake.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Vanilla CSS", "Tailwind CSS 4", "Lucide React"],
+      "design3D": [],
+      "automation": ["Property Search & Filters", "Session Favorites", "Property Comparison", "Mock Viewing Booking"]
+    },
+    "features": [
+      "ค้นหาชื่อโครงการหรือทำเล กรองประเภทและงบประมาณ พร้อมเรียงราคาและพื้นที่",
+      "บันทึกรายการโปรดระหว่างใช้งานและเลือกดูเฉพาะรายการที่บันทึก",
+      "เปิดรายละเอียดพร้อมแกลเลอรี และเปรียบเทียบที่อยู่อาศัยสูงสุด 3 รายการ",
+      "ทดลองแบบฟอร์มนัดชม โดยไม่มีบริการนายหน้า การซื้อขาย หรือรับชำระเงินจริง"
+    ]
+  },
+  {
+    "id": "orbit",
+    "title": "ORBIT — SaaS & Text Summarizer Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "SaaS", "Productivity", "Next.js"],
+    "businessOutcome": "เทมเพลตผลิตภัณฑ์ SaaS สมมติ สาธิตหน้าการตลาด แผนราคา และเครื่องมือคัดประโยคสำคัญที่ประมวลผลในเบราว์เซอร์โดยไม่ใช้ AI API",
+    "summary": "เว็บไซต์ ORBIT AI โทนมืดพร้อมภาพพื้นที่ทำงานจำลอง ทดลองสรุปข้อความ 40–6,000 ตัวอักษรด้วยกฎจัดอันดับประโยค เลือกความยาวและคัดลอกผลได้ ไม่ใช่บริการ AI จริงและไม่มีการสร้างบัญชี",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://orbit-nine-lilac.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Vanilla CSS", "Tailwind CSS 4", "Lucide React"],
+      "design3D": [],
+      "automation": ["Rule-based Extractive Summarization", "Clipboard API", "Mock Pricing Toggle & Signup"]
+    },
+    "features": [
+      "คัดประโยคเด่นจากข้อความด้วยคำสำคัญ ตัวเลข และตำแหน่ง โดยไม่เรียกโมเดล AI",
+      "เลือกสรุปสูงสุด 3 หรือ 5 ประเด็น พร้อมข้อความตัวอย่างและปุ่มคัดลอก",
+      "สลับแผนราคารายเดือนและรายปี พร้อมยอดรายปีตัวอย่าง",
+      "ทดลองสมัครแผนแบบจำลองโดยไม่ส่งข้อความไปเซิร์ฟเวอร์ ไม่สร้างบัญชี และไม่เรียกเก็บเงิน"
+    ]
+  },
+  {
+    "id": "upskill",
+    "title": "UPSKILL — Online Learning Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Education", "Online Learning", "Next.js"],
+    "businessOutcome": "เทมเพลตเรียนออนไลน์สมมติ สาธิตการค้นหาคอร์ส ทดลองเรียน ทำแบบทดสอบ และติดตามความคืบหน้าในเบราว์เซอร์โดยไม่ต้องมีบัญชี",
+    "summary": "แพลตฟอร์ม UPSKILL พร้อมคอร์สตัวอย่าง 6 คอร์ส ครอบคลุมดีไซน์ เทคโนโลยี การตลาด ธุรกิจ และพัฒนาตัวเอง มีบทเรียนข้อความ แบบฝึกหัด และแบบทดสอบ พร้อมเก็บความคืบหน้าใน localStorage",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://upskill-snowy.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Vanilla CSS", "Tailwind CSS 4", "Lucide React"],
+      "design3D": [],
+      "automation": ["Course Search & Filters", "Lesson & Quiz Progress", "localStorage Persistence"]
+    },
+    "features": [
+      "ค้นหา กรองหมวด และเรียงรายการคอร์สตัวอย่าง",
+      "เปิดรายละเอียดคอร์สและทดลองลงทะเบียนเรียนในเครื่อง",
+      "อ่านบทเรียน ทำแบบฝึกหัด และตอบแบบทดสอบพร้อมคำอธิบาย",
+      "ติดตามคอร์สที่เรียนและเปอร์เซ็นต์ความคืบหน้า โดยบันทึกใน localStorage เมื่อเบราว์เซอร์อนุญาต"
+    ]
+  },
+  {
+    "id": "pulse",
+    "title": "PULSE — Event Discovery & Ticket Booking Demo",
+    "category": "web-automation",
+    "featured": false,
+    "tags": ["Demo", "Events", "Ticket Booking", "Next.js"],
+    "businessOutcome": "เทมเพลตค้นหาอีเวนต์และจองบัตรสมมติ สาธิตการเลือกงาน ประเภทบัตร และตรวจยอดรวมก่อนยืนยัน โดยไม่มีการขายบัตรจริง",
+    "summary": "เว็บไซต์ PULSE พร้อมอีเวนต์ตัวอย่าง 6 งาน ค้นหาและกรองหมวดหรือเดือน ดูรายละเอียดและไลน์อัป เลือกรอบ ประเภทและจำนวนบัตร พร้อมค่าธรรมเนียม 5% และบัตรจำลองที่ใช้เข้างานจริงไม่ได้",
+    "media": {
+      "thumbnail": "",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://pulse-eosin-six.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Vanilla CSS", "Tailwind CSS 4", "Lucide React"],
+      "design3D": [],
+      "automation": ["Event Search & Filters", "Mock Ticket Booking Flow", "Ticket Fee Calculation"]
+    },
+    "features": [
+      "ค้นหาอีเวนต์หรือสถานที่ กรองหมวดและเดือน พร้อมเรียงตามวันหรือราคา",
+      "ดูรายละเอียดอีเวนต์ ไลน์อัป และกำหนดการตัวอย่าง",
+      "เลือกรอบ ประเภทบัตร และจำนวน พร้อมคำนวณค่าบริการ 5% ก่อนยืนยัน",
+      "แสดงบัตรจำลองโดยไม่รับข้อมูลผู้ซื้อ ไม่ชำระเงิน และไม่จองสต็อกบัตรจริง"
+    ]
   }
 ]
