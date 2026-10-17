@@ -1,5 +1,77 @@
 [
   {
+    "id": "3d-bat",
+    "title": "Bat — โมเดลค้างคาวพร้อมชุดวงจร",
+    "category": "3d-printing",
+    "featured": false,
+    "tags": ["3D Printing", "Electronics", "Prototype"],
+    "summary": "ชิ้นงานพิมพ์สามมิติรูปค้างคาว พร้อมพื้นที่ติดตั้งชุดวงจรและรางถ่าน แสดงภาพชิ้นงานและรายละเอียดการประกอบ",
+    "media": {"thumbnail": "/projects/3d-bat/thumbnail/cover.webp", "gallery": [], "reviewImages": []},
+    "demoUrl": "",
+    "techSpecs": {"embedded": ["ชุดวงจร LED และรางถ่าน"], "web": [], "design3D": ["3D Printed Enclosure"], "automation": []},
+    "features": ["ตัวชิ้นงานรูปค้างคาวพร้อมปีก", "พื้นที่ติดตั้งอุปกรณ์อิเล็กทรอนิกส์ด้านหลัง", "ภาพจริงทั้งชิ้นงานและขั้นตอนประกอบ"]
+  },
+  {
+    "id": "3d-chameleon",
+    "title": "Character Collection — โมเดลคาแรกเตอร์",
+    "category": "3d-printing",
+    "featured": false,
+    "tags": ["3D Printing", "Character", "Small Batch"],
+    "summary": "ชุดโมเดลคาแรกเตอร์สีขาวหลายท่าทาง แสดงตัวอย่างการพิมพ์หลายชิ้นบนฐานพิมพ์เดียวและการรวบรวมชิ้นงานหลังพิมพ์",
+    "media": {"thumbnail": "/projects/3d-chameleon/thumbnail/cover.webp", "gallery": [], "reviewImages": []},
+    "demoUrl": "",
+    "techSpecs": {"embedded": [], "web": [], "design3D": ["Character Models", "Batch 3D Printing"], "automation": []},
+    "features": ["คาแรกเตอร์หลายท่าทางในชุดเดียว", "ตัวอย่างการจัดวางชิ้นงานบนฐานพิมพ์", "แกลเลอรีชิ้นงานจากการผลิตหลายชิ้น"]
+  },
+  {
+    "id": "3d-clawn",
+    "title": "Mechanical Raven — โมเดลอีกาจักรกล",
+    "category": "3d-printing",
+    "featured": true,
+    "tags": ["3D Printing", "Model Art", "Mechanical Style"],
+    "summary": "โมเดลอีกาสีดำสไตล์จักรกล โดดเด่นด้วยรายละเอียดเกราะซ้อนชั้น ปีก และขา พร้อมภาพชิ้นงานจากหลายมุม",
+    "media": {"thumbnail": "/projects/3d-clawn/thumbnail/cover.webp", "gallery": [], "reviewImages": []},
+    "demoUrl": "",
+    "techSpecs": {"embedded": [], "web": [], "design3D": ["Mechanical-style Model", "Detailed 3D Print"], "automation": []},
+    "features": ["รายละเอียดเกราะและขนปีกสไตล์จักรกล", "ชิ้นงานสีดำพร้อมรายละเอียดผิวจากการพิมพ์", "ภาพหลายมุมสำหรับชมรูปทรงและรายละเอียด"]
+  },
+  {
+    "id": "3d-clicker",
+    "title": "Clicker Collection — พิกเซลและเปียโน",
+    "category": "3d-printing",
+    "featured": false,
+    "tags": ["3D Printing", "Clicker", "Fidget"],
+    "summary": "ชิ้นงาน Clicker ขนาดพกพาในรูปแบบคาแรกเตอร์พิกเซลสีส้มและคีย์เปียโนขาวดำ พร้อมภาพรายละเอียดชิ้นงานจริง",
+    "media": {"thumbnail": "/projects/3d-clicker/thumbnail/cover.webp", "gallery": [], "reviewImages": []},
+    "demoUrl": "",
+    "techSpecs": {"embedded": [], "web": [], "design3D": ["Pixel Character", "Piano-style Clicker"], "automation": []},
+    "features": ["คาแรกเตอร์พิกเซลสีส้ม", "รูปแบบคีย์เปียโนขาวดำ", "ตัวอย่างชิ้นงานขนาดพกพา"]
+  },
+  {
+    "id": "3d-ghost-click",
+    "title": "Ghost Clicker — ผีน้อยในหม้อ",
+    "category": "3d-printing",
+    "featured": false,
+    "tags": ["3D Printing", "Clicker", "Character"],
+    "summary": "ชิ้นงาน Ghost Clicker รูปผีน้อยสีขาวในหม้อสีดำ โดดเด่นด้วยดวงตาและสีตัดกัน พร้อมภาพชิ้นงานจริง",
+    "media": {"thumbnail": "/projects/3d-ghost-click/thumbnail/cover.webp", "gallery": [], "reviewImages": []},
+    "demoUrl": "",
+    "techSpecs": {"embedded": [], "web": [], "design3D": ["Character Clicker", "Multi-part 3D Print"], "automation": []},
+    "features": ["คาแรกเตอร์ผีน้อยพร้อมรายละเอียดใบหน้า", "ตัวผีสีขาวและฐานหม้อสีดำ", "ภาพรวมชิ้นงานและภาพขนาดเทียบกับมือ"]
+  },
+  {
+    "id": "3d-ghost-light",
+    "title": "Ghost Light — โคมไฟผีน้อย",
+    "category": "3d-printing",
+    "featured": true,
+    "tags": ["3D Printing", "LED", "Decorative Light"],
+    "summary": "โคมไฟตกแต่งรูปผีน้อย ใช้ชิ้นงานพิมพ์สามมิติร่วมกับแผง LED แสดงทั้งภาพเปิดไฟ โครงสร้างภายใน และอุปกรณ์ประกอบ",
+    "media": {"thumbnail": "/projects/3d-ghost-light/thumbnail/cover.webp", "gallery": [], "reviewImages": []},
+    "demoUrl": "",
+    "techSpecs": {"embedded": ["LED Light Module"], "web": [], "design3D": ["3D Printed Lampshade"], "automation": []},
+    "features": ["ตัวโคมคาแรกเตอร์ผีน้อยสีขาว", "แสง LED ส่องผ่านตัวชิ้นงาน", "ภาพรายละเอียดภายในและขั้นตอนประกอบ"]
+  },
+  {
     "id": "blue-fitness",
     "title": "BLU FITNESS — Digital Membership",
     "category": "web-automation",
