@@ -1,5 +1,31 @@
 [
-
+  {
+    "id": "directory",
+    "title": "Pattaya Film Supplier Directory",
+    "category": "web-automation",
+    "featured": true,
+    "tags": ["Web", "Next.js", "Google Apps Script"],
+    "businessOutcome": "รวมข้อมูลผู้ให้บริการกองถ่ายไว้ในที่เดียว พร้อมค้นหาตามหมวดหมู่และพื้นที่ โดยจัดการข้อมูลผ่าน Google Sheets",
+    "summary": "เว็บไซต์ไดเรกทอรีผู้ให้บริการกองถ่ายในพัทยาและพื้นที่ใกล้เคียง ค้นหาธุรกิจ ดูรายละเอียด ช่องทางติดต่อ และแกลเลอรีภาพ รองรับการใช้งานบนมือถือ",
+    "media": {
+      "thumbnail": "/projects/directory/cover.jpg",
+      "gallery": [],
+      "reviewImages": []
+    },
+    "demoUrl": "https://directory-zeta.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "TypeScript", "Responsive Web Design", "Vercel"],
+      "design3D": [],
+      "automation": ["Google Sheets", "Google Apps Script", "Google Drive", "Server-side Data Fetching"]
+    },
+    "features": [
+      "ค้นหาผู้ให้บริการจากชื่อและรายละเอียด พร้อมกรองหมวดหมู่และพื้นที่",
+      "รองรับธุรกิจหลายหมวด พร้อมหน้ารายละเอียดและแกลเลอรีภาพจริง",
+      "เชื่อมข้อมูลจาก Google Sheets ผ่าน Google Apps Script และคัดกรองข้อมูลที่อนุญาตเผยแพร่ก่อนแสดงบนเว็บ",
+      "รองรับมือถือ แท็บเล็ต และเดสก์ท็อป"
+    ]
+  },
   {
     "id": "chodphiphat-commerce",
     "title": "B2B Wood Commerce Platform",

@@ -8,7 +8,7 @@ const nav_links = [
   { href: "/smart-iot", label: "Smart IoT" },
   { href: "/web-automation", label: "Web & AI" },
   { href: "/3d-printing", label: "3D Printing" },
-  { href: "/demos", label: "Demos" },
+  { href: "/demo", label: "Demos" },
 ];
 
 export default function Navbar() {

@@ -140,7 +140,7 @@ export default function Home() {
               <Link href="/3d-printing" className="btn-view-more">
                 <span>3D Design & Production ➔</span>
               </Link>
-              <Link href="/demos" className="btn-view-more">
+              <Link href="/demo" className="btn-view-more">
                 <span>ดูเว็บไซต์ Demo ↗</span>
               </Link>
             </div>
