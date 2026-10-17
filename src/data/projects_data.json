@@ -1,5 +1,32 @@
 [
   {
+    "id": "blue-fitness",
+    "title": "BLU FITNESS — Digital Membership",
+    "category": "web-automation",
+    "featured": true,
+    "tags": ["Web", "Next.js", "Membership", "Admin Dashboard"],
+    "businessOutcome": "ออกแบบประสบการณ์จัดการสมาชิกฟิตเนส รวมแพ็กเกจ บัตรสมาชิก คูปอง และคะแนนสะสมไว้ในเว็บแอปเดียว",
+    "summary": "เว็บแอปสำหรับ BLU FITNESS ชะอำ พร้อมหน้าสมาชิกแบบ Mobile-first และหน้าจอจัดการสำหรับพนักงาน โดยบางส่วนของระบบหลังบ้านยังเป็นต้นแบบและอยู่ระหว่างพัฒนา",
+    "media": {
+      "thumbnail": "/projects/blue-fitness/thumbnail/demo.png",
+      "gallery": ["/projects/blue-fitness/gallery/desktop_full.png", "/projects/blue-fitness/gallery/mobile_full.png"],
+      "reviewImages": []
+    },
+    "demoUrl": "https://blue-fitness-chi.vercel.app/",
+    "techSpecs": {
+      "embedded": [],
+      "web": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Drizzle ORM", "Neon PostgreSQL", "Vercel"],
+      "design3D": [],
+      "automation": ["QR Code Membership", "Member Management UI"]
+    },
+    "features": [
+      "หน้าสมาชิกแบบ Mobile-first พร้อมบัตรดิจิทัลและ QR Code",
+      "แสดงแพ็กเกจสมาชิก คูปอง และคะแนนสะสม",
+      "หน้าจอหลังบ้านสำหรับจัดการสมาชิก โปรโมชัน และเช็คอิน โดยบางส่วนยังเป็น mock",
+      "ออกแบบรองรับมือถือ แท็บเล็ต และเดสก์ท็อป"
+    ]
+  },
+  {
     "id": "directory",
     "title": "Pattaya Film Supplier Directory",
     "category": "web-automation",

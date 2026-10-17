@@ -6,6 +6,10 @@ import { fileURLToPath } from "node:url";
 const project_root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const demos = [
   {
+    slug: "blue-fitness",
+    url: "https://blue-fitness-chi.vercel.app/",
+  },
+  {
     slug: "bite-club",
     url: "https://store-food-beta.vercel.app/",
   },
@@ -82,6 +86,7 @@ async function capture_demo(browser, demo) {
     content:
       "*, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition-duration: 0s !important; scroll-behavior: auto !important; }",
   });
+  await desktop.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await desktop.waitForTimeout(250);
   const ready_state = await desktop.evaluate(() => document.readyState);
   if (ready_state !== "complete") await desktop.waitForLoadState("load", { timeout: 15000 }).catch(() => {});
@@ -118,6 +123,7 @@ async function capture_demo(browser, demo) {
     content:
       "*, *::before, *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition-duration: 0s !important; scroll-behavior: auto !important; }",
   });
+  await mobile.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await mobile.waitForTimeout(250);
   await mobile.screenshot({
     path: path.join(gallery_root, "mobile_full.png"),
